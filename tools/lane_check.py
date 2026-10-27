@@ -205,7 +205,9 @@ def classify_row_cells(row: str, source_col=None):
     headerless_record = len(cells) >= 3 and bool(MSG_LABEL_RE.match(cells[0]))
     is_record = strict or headerless_record
     out = []
+    cand_order = []  # v0.3.1: headerless record-form candidate IDs, in cell order
     ambiguous = False
+    amb_why = None
     for i, cell in enumerate(cells):
         if strict and i == source_col:
             out.extend(classify_record_cell(cell))
@@ -231,6 +233,8 @@ def classify_row_cells(row: str, source_col=None):
                 if repo is None or repo == LOCAL_REPO:
                     if is_record:
                         out.append((cid, "canonical", repo))
+                        if not strict:
+                            cand_order.append(cid)
                     else:
                         out.append((cid, "reference", repo))
                         ambiguous = True
@@ -241,6 +245,8 @@ def classify_row_cells(row: str, source_col=None):
         for m in ISSUE1_COMMENT_RE.finditer(cell):
             if is_record:
                 out.append((m.group(1), "canonical", None))
+                if not strict:
+                    cand_order.append(m.group(1))
             else:
                 out.append((m.group(1), "reference", None))
         rest = ISSUE1_COMMENT_RE.sub(" ", cell)
@@ -249,13 +255,36 @@ def classify_row_cells(row: str, source_col=None):
                 # headerless record row: bare-ID cell = the message record
                 # (v0.2 rule (ii), retained for the column-less fallback)
                 out.append((cid, "canonical", None))
+                if not strict:
+                    cand_order.append(cid)
             else:
                 out.append((cid, "reference", None))
                 if rest.strip() == cid:
                     ambiguous = True
+    multi_id_flag = False
+    if not strict and headerless_record:
+        # v0.3.1 (her re-grade 6455594534, narrow remaining edge): a truly
+        # headerless row has NO trustworthy designated source column. If
+        # multiple distinct ID-like record forms occur, keep only the FIRST
+        # (leftmost) as the canonical record, demote the rest to reference,
+        # and flag the row for human adjudication - explicit ambiguity over
+        # guessing; never two records from one row.
+        distinct = []
+        for cid in cand_order:
+            if cid not in distinct:
+                distinct.append(cid)
+        if len(distinct) > 1:
+            keep = distinct[0]
+            out = [(cid, ("canonical" if cid == keep else "reference"), repo)
+                   for (cid, kind, repo) in out]
+            multi_id_flag = True
+            amb_why = ("headerless record row with multiple ID-like cells - "
+                       "source column guessed (first kept, rest reference)")
+    if multi_id_flag:
+        return out, True, amb_why
     if not is_record and len(cells) >= 3 and ambiguous:
-        return out, True
-    return out, False
+        return out, True, amb_why or "non-record row with bare-ID cell or local link"
+    return out, False, None
 
 
 def parse_rounds_index(rounds_dir: Path):
@@ -293,7 +322,7 @@ def parse_rounds_index(rounds_dir: Path):
             for lineno, stripped in body:
                 if set(stripped.replace("|", "").strip()) <= {"-", " "}:
                     continue
-                classified, is_amb = classify_row_cells(stripped, source_col)
+                classified, is_amb, amb_why = classify_row_cells(stripped, source_col)
                 seen_in_row = set()
                 for cid, kind, repo in classified:
                     if (cid, kind) in seen_in_row:
@@ -306,7 +335,7 @@ def parse_rounds_index(rounds_dir: Path):
                 if source_col is None and is_amb:
                     ambiguous.setdefault(f.name, []).append(
                         {"line": lineno, "row": stripped[:160],
-                         "why": "non-record row with bare-ID cell or local link"})
+                         "why": amb_why or "non-record row with bare-ID cell or local link"})
     return index, ambiguous
 
 
@@ -390,13 +419,16 @@ def run_check(snapshot: Path, rounds_dir: Path, claims: Path | None):
                      if any(p.get("kind") == "canonical" for p in prov)}
     referenced_ids = set(index) - canonical_ids
     report = {
-        "tool": "lane_check v0.3 (Meraki's second review 6452507980: "
+        "tool": "lane_check v0.3.1 (v0.3 row-purpose/column contract per her 6452507980; v0.3.1 = her re-grade 6455594534 narrow edge: headerless record rows with multiple ID-like cells keep only the first canonical, rest reference + ambiguous_rows flag; "
                 "row-purpose/column contract BEFORE link parsing; "
                 "source-column record tables; linked-incidental citations are "
                 "REFERENCED_ONLY; ambiguous legacy rows flagged for human "
                 "adjudication, never silently matched)",
         "scope_honesty": "advisory consistency check; authenticates nothing; "
-                        "declared claim times are DECLARED_UNVERIFIED (Appendix A)",
+                        "declared claim times are DECLARED_UNVERIFIED (Appendix A); "
+                        "a clean bucket on ONE snapshot (e.g. referenced_only_source=0) "
+                        "is a statement about that snapshot only, NOT real-time coverage "
+                        "of comments that arrive after it",
         "source_n": len(source_ids),
         "index_n": len(index),
         "canonical_index_n": len(canonical_ids),

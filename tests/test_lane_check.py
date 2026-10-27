@@ -344,5 +344,71 @@ class V03RowPurposeContract(unittest.TestCase):
         self.assertEqual(r["matched"], [self.CID])
 
 
+class V031HeaderlessMultiId(unittest.TestCase):
+    """v0.3.1 (her re-grade 6455594534, the one narrow remaining edge): a
+    HEADERLESS record row treats every local link / issue#1-comment / bare-ID
+    cell as canonical — so one row could mint TWO records, contradicting the
+    "one row records one message" contract. Repair per her guidance: keep only
+    the FIRST (leftmost) record form canonical, demote the rest to reference,
+    flag the row in ambiguous_rows for human adjudication (explicit ambiguity
+    over guessing); no parser framework added.
+    """
+
+    CID = "6443236880"
+    LOCAL = "https://github.com/MarkDude-design/precipient/issues/1#issuecomment-"
+
+    def _run(self, rounds_text, ids):
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            snap = _snapshot(tmp, [(int(i), "2026-10-27T13:35:12Z") for i in ids])
+            rounds = _rounds_dir(tmp, {"round-x.md": rounds_text})
+            return run_check(snap, rounds, None)
+
+    def test_her_exact_fixture_first_only_canonical(self):
+        # Her fixture verbatim: first ID canonical, second reference, row
+        # flagged ambiguous — never two records.
+        r = self._run(
+            "| 008-M-P1 (in 007-M-02) | Meraki | 6444140310 | [%s](%s%s) |\n"
+            % (self.CID, self.LOCAL, self.CID),
+            ["6444140310", self.CID])
+        self.assertEqual(r["matched"], ["6444140310"])
+        self.assertEqual(r["referenced_only_source"], [self.CID])
+        self.assertEqual(r["ambiguous_rows_n"], 1)
+        self.assertEqual(r["ambiguous_rows"]["round-x.md"][0]["line"], 1)
+
+    def test_two_bare_id_cells_first_only_canonical(self):
+        r = self._run(
+            "| 011-M-01 | Meraki | 6448692635 | 6448941890 | note |\n",
+            ["6448692635", "6448941890"])
+        self.assertEqual(r["matched"], ["6448692635"])
+        self.assertEqual(r["referenced_only_source"], ["6448941890"])
+        self.assertEqual(r["ambiguous_rows_n"], 1)
+
+    def test_single_record_form_stays_unflagged(self):
+        # Control: one record form + embedded reference = current good path,
+        # no ambiguity flag, no demotion.
+        r = self._run(
+            "| 011-M-01 | Meraki | 6448692635 | 17:22 | cites %s in prose |\n"
+            % self.CID,
+            ["6448692635", self.CID])
+        self.assertEqual(r["matched"], ["6448692635"])
+        self.assertEqual(r["referenced_only_source"], [self.CID])
+        self.assertEqual(r["ambiguous_rows_n"], 0)
+
+    def test_headered_multi_id_row_unaffected(self):
+        # Her fix must not touch HEADERED tables (strict column contract):
+        # source column canonical, extra link in another cell reference,
+        # and NO ambiguity flag (the column contract is trustworthy).
+        hdr = ("| Message ID | Timestamp | Seat claimed | Posted by | Source URL "
+               "| read_up_to | Fidelity |\n| --- | --- | --- | --- | --- | --- | --- |\n")
+        r = self._run(
+            hdr + "| 004-M-01 | 2026-10-27T14:08:44Z | Meraki | acct "
+            "| issue #1 comment 6444140310 | through 6443814967 "
+            "| cites [%s](%s%s) |\n" % (self.CID, self.LOCAL, self.CID),
+            ["6444140310", "6443814967", self.CID])
+        self.assertEqual(r["matched"], ["6444140310"])
+        self.assertEqual(r["ambiguous_rows_n"], 0)
+
+
 if __name__ == "__main__":
     unittest.main()

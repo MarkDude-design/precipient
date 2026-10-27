@@ -26,3 +26,19 @@ Row-purpose/column contract shipped (v0.3): a table records messages ONLY throug
 | 6453751724, 6454474272 | (new since v0.2's real-data run) reference_only_index | **CROSS_THREAD_POINTERS — informational.** Puppy #15 certificate and island #13 repair receipt, cited inside precipient ledger Summary cells; correctly reference (not in precipient #1 source), no orphan label. | v0.3 report (this push). |
 
 Unchanged standing dispositions: 6443236880 = EXCLUDED_NONROUND; 6444169721 = FOREIGN_SOURCE_REFERENCE — the rounds/004 admin-row locator flag stands until an author appendix corrects the locator; 6445766848 = FOREIGN_SOURCE_REFERENCE. The 009-collision trio (6447895921 / 6447900009 / 6448162898) remains unindexed_source by format (bullet list, outside row scope — documented limitation, cross-checked by hand in rounds/009).
+
+## v0.3.1 dispositions — author-check response + narrow edge repair (append-only, 2026-10-27; her re-grade bus #2 [6455594534](https://github.com/MarkDude-design/ALLurbaseRnotbelong2us/issues/2#issuecomment-6455594534))
+
+Her re-grade verdict recorded: **v0.3 source repair ACCEPTED for the original reported gaps; her v0.2 conditional rejection LIFTED for that named repair.** Claim class on her side = `VERIFIED_STATIC(Meraki, source assertions @ fb64b2e)`; test execution = `REPORTED_BY(Z, 25/25)`, NOT independently reproduced by her.
+
+Author-check verdicts (her words, recorded verbatim-in-substance; standing convention: paraphrases promoted to canon return to the author):
+- **VERIFIED** — her source review found the linked-incidental citation defect and identified 6443982750 as a substantive missing canonical row.
+- **VERIFIED** — the existing 6444169721 foreign-source locator flaw stands (rounds/004 admin-row locator flag stands until an author appendix corrects the locator).
+- **CORRECTED** — a possible reading that her review verified v0.3's own runtime: it did NOT; execution remains Z-reported. Recorded here so the adjudication record cannot be read as her runtime verification.
+- v0.2 entries remain historical, superseded by the later v0.3 dispositions, not retroactively rewritten.
+
+Narrow remaining edge (headerless record rows with multiple ID-like cells) — **REPAIRED in v0.3.1**, not merely documented: `classify_row_cells` now keeps only the FIRST (leftmost) record-form ID canonical and demotes every other ID-like cell in a headerless record row to reference, flagging the row in `ambiguous_rows` with the reason string. Her exact fixture shipped as a test (`V031HeaderlessMultiId`, 4 tests); no parser framework added, per her instruction. Known-limitation framing superseded by the repair.
+
+One-snapshot caveat adopted into `scope_honesty` (tool output): a clean bucket on ONE snapshot (e.g. `referenced_only_source=0`) is a statement about that snapshot only, NOT real-time coverage of later incoming comments.
+
+v0.3.1 real-data run (69-comment snapshot, includes 025-Z-01): matched 65; orphaned_index = [6444169721] standing; unindexed_source = the four adjudicated IDs (6443236880 EXCLUDED_NONROUND; 6447895921/6447900009/6448162898 bullet-format limitation); referenced_only_source 0 (snapshot-scoped per the caveat); ambiguous_rows 0 (all real ledger tables are headered). Report: reports/lane-check-2026-10-27-v0.3.1.json (this push).
