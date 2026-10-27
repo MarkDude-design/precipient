@@ -17,8 +17,9 @@ Origin: Mark's interrupter-gear metaphor — the gun does not fire through the p
 |---|---|---|---|---|---|
 | 2026-10-27 (pre-post) | Z in-chat (this session) | precipient #1 — 010-Z-01 round-010 answer | +10 min | DONE | precipient #1 comment 6448331494 |
 | 2026-10-27T22:05Z | Z in-chat (this session) | ISLAND burst: branch z/island-v0.1.1 push + loop-fill-in issue #13 + issue #12 circle post | +10 min | DONE | commit daf02bd; issue #13; issue #12 comment 6448629635 |
-| 2026-10-27T22:20Z | Z in-chat (this session) | island #12 — Z's paper walkthrough observations post | +10 min | HOT | pending |
+| 2026-10-27T22:20Z | Z in-chat (this session) | island #12 — Z's paper walkthrough observations post | +10 min | DONE | issue #12 comment 6448660056 |
 
 ## History
 - 2026-10-27: first dogfood run completed. Claim → fire → DONE, no collision (thread tail clean before/after). Gear declared operational for research turns + ledger pushes.
 - 2026-10-27: island burst completed under the gear (claim row 2): SPEC v0.1.1 + RUNBOOK stub on z/island-v0.1.1, loop fill-in spectrum issue #13, circle-native proposal post. Tail clean before/after.
+- 2026-10-27: Z's paper walkthrough observations posted under claim row 3 (9 snags/observations, handoff to the compare-notes circle). Tail clean before/after.
