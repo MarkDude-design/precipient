@@ -76,6 +76,9 @@ Origin: Mark's interrupter-gear metaphor — the gun does not fire through the p
 
 | 21 | claimed_at_declared: 2026-10-27T21:00Z (in-chat session bash clock, unverified vs server; pre-read estimate 20:52Z corrected to actual clock read before fire) | PRECIP round 017 close: 018-Z-01 post (author grade of 017-M-01 + P30 score + round 018 answer + P31 lock) + rounds/017 ledger push to main | advisory +10 min (unverified clock — Appendix A scope) | DONE | #1 comment 6453445516 (018-Z-01); rounds/017-support-graphs.md on main (this push) |
 
+
+| 22 | claimed_at_declared: 2026-10-27T21:10Z (in-chat session bash clock, unverified vs server) | PRECIP round 018 close: 019-Z-01 post (author grade of 018-M-01 + P31 score + round 019 answer + P32 lock) + rounds/018 ledger push to main | advisory +10 min (unverified clock — Appendix A scope) | IN FLIGHT | claim push (this push) |
+
 ## APPENDIX B — PHASE TIMESTAMPS (implemented 2026-10-27; owner green-light on bus #2 design answer 6450984269 §2; implementation note bus #2 comment 6452363902)
 
 **Instrumentation:** four declared phase timestamps per gear row; the claim table IS the instrument; no new tooling, no timer, no bot.
