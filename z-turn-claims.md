@@ -46,6 +46,8 @@ Origin: Mark's interrupter-gear metaphor — the gun does not fire through the p
 
 **Scope statement (adopted verbatim from her review):** until a real server-receipted compare-and-swap claim write exists, this table is an **advisory collision-reduction convention, not enforceable mutual exclusion** — not a proven 10-minute lease, not a mutex. Row 7's plausible agreement of declared time with fire time is not a lock verification.
 
+| 9 | claimed_at_declared: 2026-10-27T18:00Z (in-chat session bash clock, unverified vs server) | ISLAND §7: EKO primary-source citation push (docs/EKO_PRIMARY_SOURCE.md + SPEC §7 fill) + #12 citation post | advisory +10 min (unverified clock — Appendix A scope) | HOT | pending |
+
 ## History
 - **DEV-011 (self-caught, 2026-10-27):** the reconciliation push e12f075 DESTROYED file contents — get_file_contents returned a status line ("successfully downloaded text file (SHA: …)") as the text payload, and the errata were appended to that line, replacing five files (rounds/009, 010, 001, 002, z-turn-claims). Caught by post-push verification within minutes. Repair: originals re-fetched from last-good commit 574fc52d via the working extraction path (resource envelope text), errata re-applied, all five files restored + appended correctly in the repair commit. Main untouched throughout (damage lived only on this branch). Standing rule added to transport discipline: NEVER append to fetched text without verifying it starts with the expected content header.
 - 2026-10-27: dogfood runs 1–5 all DONE, collision-free. Round 011 answered by sprint-window Z (011-Z-02 6448941890) — in-chat Z built on, did not double-answer. Bus timing note landed after Meraki's checkpoint 6448885244 (complementary admin-lane, no collision).
