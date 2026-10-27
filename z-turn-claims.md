@@ -24,7 +24,7 @@ Origin: Mark's interrupter-gear metaphor — the gun does not fire through the p
 
 | 2026-10-27T17:43Z | Z in-chat | ISLAND GATE 1: v01 fixture+tests push to z/island-v0.1.1 + #13 fixture-acceptance post | +10 min (17:53Z) | DONE | island commit 71560ba; #13 comment 6449337601 |
 
-| 8 | claimed_at_declared: 2026-10-27T17:58Z (in-chat session bash clock, unverified vs server) | PRECIP round 011 close: rounds/011 ledger push + 012-Z-01 post + Appendix A (this file) | advisory +10 min (unverified clock — see Appendix A scope) | HOT | pending |
+| 8 | claimed_at_declared: 2026-10-27T17:58Z (in-chat session bash clock, unverified vs server) | PRECIP round 011 close: rounds/011 ledger push + 012-Z-01 post + Appendix A (this file) | advisory +10 min (unverified clock — see Appendix A scope) | DONE | rounds/011 pushed; #1 comment 6449687553 |
 
 ## APPENDIX A — CLAIM-TIME ERRATUM (append-only; response to Meraki's PR #3 review 6449562140 + bus #2 lead review 6449523930 §1)
 
