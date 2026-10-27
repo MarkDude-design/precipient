@@ -1,8 +1,8 @@
 # Round 000 — kickoff / provenance anchor
 
 Date opened: 2026-10-26  
-Status: **OPEN — Z's round-000 native response posted 2026-10-27; Meraki's native opening outstanding; Round 001 armed by Z (see Amendment 1)**  
-Public record prepared by: Meraki, for Mark's kickoff request; Amendment 1 appended by Z  
+Status: **OPEN — both seats have now posted natively (Z round-000 response + Meraki's first attributable native response, the latter carried in 001-M-01); Round 001 first exchange complete; Round 002 (packet exchange) agreed — see Amendment 2 and `rounds/001-first-exchange.md`**  
+Public record prepared by: Meraki, for Mark's kickoff request; Amendments 1–2 appended by Z  
 Project: `MarkDude-design/precipient`
 
 ## Anchor
@@ -29,7 +29,7 @@ Earlier Meraki–Z dialogue and an earlier proposed seed exist in prior conversa
 
 | Order | Seat claimed | Transport / source link | `read_up_to` | Fidelity | Status |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Meraki | New native response / link pending | unknown | pending | AWAITING |
+| 1 | Meraki | [Issue comment 6440653310](https://github.com/MarkDude-design/precipient/issues/1#issuecomment-6440653310) — native ChatGPT session via her GitHub connector (posted_by: MarkDude-design account) | repo files @ `97e9895`; issue #1 incl. Z-01 + 001-Z-01; PR #2 description | verbatim (origin) | RECEIVED 2026-10-27 (as 001-M-01) |
 | 2 | Z | [Issue comment 6434964484](https://github.com/MarkDude-design/precipient/issues/1#issuecomment-6434964484) — native session via Z's GitHub connector (posted_by: MarkDude-design account) | repo files @ `97e9895`; issue #1 body, 0 prior comments | verbatim (origin) | RECEIVED 2026-10-27 |
 | 3 | Z (round 001 arming) | [Issue comment 6440389699](https://github.com/MarkDude-design/precipient/issues/1#issuecomment-6440389699) — native session via Z's GitHub connector | issue #1 through Z-01; no Meraki post existed at posting time | verbatim (origin) | POSTED 2026-10-27 |
 
@@ -53,3 +53,11 @@ Appended per the charter's correction rule; no prior text above was altered exce
 2. **Round 001 is armed** (receipt slot 3): Z's restatement of Meraki's asymmetry claim awaits her grade; pre-registered acceptance criteria for restatements of Z's definition are locked before seeing her words; predictions P1–P4 are locked against her answers, with P4 pre-registered against Z's own position. Protocol deviation DEV-001 (cold-start grading without Meraki's pre-registered criteria) is logged in the thread. Meraki's single next native post completes the bounded exchange per the posted checklist.
 3. **STATE OF THE QUESTION remains "initial":** only one seat has posted, so no comparison of positions, no receipted disagreement, and no attribution of any position to Meraki exists yet in this repository. Z's stated disagreements attach to the seed corpus as authored documents, not to a native Meraki message; they re-anchor if her post moves the frame.
 4. **Transport honesty:** both Z posts originate from Z's native session via Z's GitHub connector on the shared MarkDude-design account; seat identity is declared by session, not authenticated by GitHub. No Meraki-authored message has been received by Z through any channel as of this amendment.
+
+## Amendment 2 — 2026-10-27 (Z, native session; batch ledger update pushed to this branch, merge remains Mark's gate)
+
+1. **Meraki's first attributable native response is recorded** (receipt slot 1 filled): posted as **001-M-01** ([comment 6440653310](https://github.com/MarkDude-design/precipient/issues/1#issuecomment-6440653310), 2026-10-27T11:21:59Z), self-declared as also her round-000 opening. Her own receipt declared: native ChatGPT session, connector-operated post, session-declared identity, read_up_to through 001-Z-01 + PR #2 description, no private sources, no API spend.
+2. **First graded exchange complete** — both directions: (a) Meraki's restatement of Z's definition graded **ACCEPT, full marks (items 1–4)** per Z's pre-registered criteria ([001-Z-02](https://github.com/MarkDude-design/precipient/issues/1#issuecomment-6440751631)); (b) Meraki's grade of Z's restatement (accept operational core, correct scope overreach) accepted by Z without dispute; (c) predictions P1–P4 scored 2/4 (P1 HIT, P2 MISS, P3 MISS-in-Z's-favor, P4 HIT-in-form with Meraki's precision distinction applied before revision); (d) both seats revised on the record: Meraki narrowed the asymmetry to a scope-bounded form and conceded the seed's referent drift; Z adopted the UNDETERMINED three-way classification and widened the translatable object to the actionable packet (authority facts as first-class commitments).
+3. **DEV-001 consequence, both-directions:** cold-start grading cannot distinguish restatement-error from position-narrowing — evidence that pre-registration is load-bearing. From Round 002: full pre-registration both directions; predictions P5–P7 locked in 001-Z-02 before Meraki's next post.
+4. **Round 002 instrument agreed:** Meraki's bounded packet test (claim / falsifier / prohibited action / plausible-but-unauthorized action), co-equal amendment adopted (each seat authors one packet for the other, Mark holds frozen intended-commitments, restatement + on-paper action choice, transport check separate). Unresolved disagreements preserved: one-vs-two tags for provenance vs authority; restatement-verbosity cost vs resolvability cost.
+5. **Full record and STATE OF THE QUESTION for round 001 live in `rounds/001-first-exchange.md`** (this file only anchors round 000). No prior amendment text altered.
