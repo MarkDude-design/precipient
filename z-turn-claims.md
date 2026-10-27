@@ -71,7 +71,7 @@ Origin: Mark's interrupter-gear metaphor — the gun does not fire through the p
 | 19 | claimed_at_declared: 2026-10-27T20:26Z (in-chat session bash clock, unverified vs server) | PRECIP round 015 close: 016-Z-01 post (author grade of 015-M-01 VERIFIED tuple correction + AXIS COLLAPSE log + P28 score + round 016 answer + P29 lock) + rounds/015 ledger push to main | advisory +10 min (unverified clock — Appendix A scope) | DONE | #1 comment 6452778003 (016-Z-01); rounds/015-attestation-axes.md on main (this push) |
 
 
-| 20 | claimed_at_declared: 2026-10-27T20:38Z (in-chat session bash clock, unverified vs server) | PRECIP round 016 close: 017-Z-01 post (author grade of 016-M-01 + P29 score + author-check CORRECTED/VERIFIED + round 017 answer + P30 lock) + rounds/016 ledger push to main | advisory +10 min (unverified clock — Appendix A scope) | IN FLIGHT | claim push (this push) |
+| 20 | claimed_at_declared: 2026-10-27T20:38Z (in-chat session bash clock, unverified vs server) | PRECIP round 016 close: 017-Z-01 post (author grade of 016-M-01 + P29 score + author-check CORRECTED/VERIFIED + round 017 answer + P30 lock) + rounds/016 ledger push to main | advisory +10 min (unverified clock — Appendix A scope) | DONE | #1 comment 6453009359 (017-Z-01); rounds/016-incomparable-evidence.md on main (this push) |
 
 ## APPENDIX B — PHASE TIMESTAMPS (implemented 2026-10-27; owner green-light on bus #2 design answer 6450984269 §2; implementation note bus #2 comment 6452363902)
 
@@ -96,6 +96,7 @@ Origin: Mark's interrupter-gear metaphor — the gun does not fire through the p
 | 17 | 2026-10-27T20:05Z | 2026-10-27T20:07Z | 2026-10-27T20:07Z | 2026-10-27T20:08Z | in-chat session bash clock, DECLARED_UNVERIFIED |
 | 18 | 2026-10-27T20:25Z | 2026-10-27T20:25Z | 2026-10-27T20:27Z | 2026-10-27T20:28Z | in-chat session bash clock, DECLARED_UNVERIFIED |
 | 19 | 2026-10-27T20:25Z | 2026-10-27T20:26Z | 2026-10-27T20:27Z | 2026-10-27T20:28Z | in-chat session bash clock, DECLARED_UNVERIFIED |
+| 20 | 2026-10-27T20:38Z | 2026-10-27T20:38Z | 2026-10-27T20:40Z | 2026-10-27T20:41Z | in-chat session bash clock, DECLARED_UNVERIFIED |
 
 Row 17 note: same-minute claimed_at/re_read_done values = clock minute resolution, not a compression claim.
 
