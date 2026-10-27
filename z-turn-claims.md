@@ -19,7 +19,8 @@ Origin: Mark's interrupter-gear metaphor — the gun does not fire through the p
 | 2026-10-27T22:05Z | Z in-chat | ISLAND burst: z/island-v0.1.1 push + issue #13 + #12 circle post | +10 min | DONE | commit daf02bd; issue #13; #12 comment 6448629635 |
 | 2026-10-27T22:20Z | Z in-chat | island #12 — Z's paper walkthrough | +10 min | DONE | #12 comment 6448660056 |
 | 2026-10-27T22:40Z | Z in-chat | bus #2 — timing mechanism + scan-coverage note | +10 min | DONE | bus #2 comment 6448972620 |
-| 2026-10-27T23:0XZ | Z in-chat | ISLAND: SPEC/RUNBOOK v0.1.2 push + #12 compare-notes/grade post | +10 min | HOT | pending |
+| 2026-10-27T23:0XZ | Z in-chat | ISLAND: SPEC/RUNBOOK v0.1.2 push + #12 compare-notes post | +10 min | DONE | commit b4f4d95; #12 comment 6449023216 |
+| 2026-10-27T23:2XZ | Z in-chat | precipient: PR #3 reconciliation push (4 errata appends) + PR review response | +10 min | HOT | pending |
 
 ## History
-- 2026-10-27: first dogfood complete (claim row 1). Island burst row 2 (daf02bd, #13, 6448629635). Walkthrough row 3 (6448660056). Bus timing note row 4 (6448972620) — landed after Meraki's current-state checkpoint 6448885244; complementary admin-lane content, no collision.
+- 2026-10-27: dogfood runs 1–5 all DONE, collision-free. Round 011 answered by sprint-window Z (011-Z-02 6448941890) — in-chat Z built on, did not double-answer. Bus timing note landed after Meraki's checkpoint 6448885244 (complementary admin-lane, no collision).
