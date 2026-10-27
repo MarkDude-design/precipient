@@ -63,7 +63,31 @@ Origin: Mark's interrupter-gear metaphor — the gun does not fire through the p
 | 16 | claimed_at_declared: 2026-10-27T20:12Z (in-chat session bash clock, unverified vs server) | PRECIP round 014 close: 015-Z-01 post (author grade of 014-M-01 + P27 score + round 015 answer + P28 lock) + rounds/014 ledger push to main | advisory +10 min (unverified clock — Appendix A scope) | DONE | #1 comment 6452205990; rounds/014-trustworthy-boundary.md on main |
 
 
-| 17 | claimed_at_declared: 2026-10-27T20:07Z (in-chat session bash clock, unverified vs server) | GEAR v0.1 phase-stamping: implement Appendix B (phase-timestamp columns) in z-turn-claims.md per owner green-light + bus #2 implementation note (reply to design answer 6450984269) | advisory +10 min (unverified clock — Appendix A scope) | IN FLIGHT | claim push (this push) |
+| 17 | claimed_at_declared: 2026-10-27T20:07Z (in-chat session bash clock, unverified vs server) | GEAR v0.1 phase-stamping: implement Appendix B (phase-timestamp columns) in z-turn-claims.md per owner green-light + bus #2 implementation note (reply to design answer 6450984269) | advisory +10 min (unverified clock — Appendix A scope) | DONE | bus #2 comment 6452363902; Appendix B on main (this push) |
+
+## APPENDIX B — PHASE TIMESTAMPS (implemented 2026-10-27; owner green-light on bus #2 design answer 6450984269 §2; implementation note bus #2 comment 6452363902)
+
+**Instrumentation:** four declared phase timestamps per gear row; the claim table IS the instrument; no new tooling, no timer, no bot.
+
+**Phases (mapped to protocol steps):**
+- `prefetch_start` — COMPOSE begins: session clock read at start of turn processing (target thread fetch begins).
+- `sources_in_hand` — CHECK complete: target thread tail + this table read; no hot zone.
+- `re_read_done` — RE-CHECK complete: post-claim re-read of target tail done.
+- `fired` — FIRE complete: fired artifact posted/pushed.
+
+**Rules (from the design answer, adopted 2026-10-27):**
+- Clock source declared in every stamp; all values DECLARED_UNVERIFIED (Appendix A scope). Server fire receipts (`fire_created_at_server`, Appendix A) remain the only server-anchored evidence.
+- 11-minute phases = advisory preference only — not a lease, not a mutex, not enforceable.
+- P50/P95: NOT MEASURED until ≥10 phase-stamped rows exist; then computed from declared clocks only, labeled declared-clock estimates. No fabricated distributions.
+- Append-only: rows 1–16 stay unstamped (history); phase stamps begin with row 17.
+
+**Phase stamps (declared — in-chat session bash clock, unverified vs server):**
+
+| row | prefetch_start | sources_in_hand | re_read_done | fired | clock source |
+|---|---|---|---|---|---|
+| 17 | 2026-10-27T20:05Z | 2026-10-27T20:07Z | 2026-10-27T20:07Z | 2026-10-27T20:08Z | in-chat session bash clock, DECLARED_UNVERIFIED |
+
+Row 17 note: same-minute claimed_at/re_read_done values = clock minute resolution, not a compression claim.
 
 ## History
 - **DEV-011 (self-caught, 2026-10-27):** the reconciliation push e12f075 DESTROYED file contents — get_file_contents returned a status line ("successfully downloaded text file (SHA: …)") as the text payload, and the errata were appended to that line, replacing five files (rounds/009, 010, 001, 002, z-turn-claims). Caught by post-push verification within minutes. Repair: originals re-fetched from last-good commit 574fc52d via the working extraction path (resource envelope text), errata re-applied, all five files restored + appended correctly in the repair commit. Main untouched throughout (damage lived only on this branch). Standing rule added to transport discipline: NEVER append to fetched text without verifying it starts with the expected content header.
