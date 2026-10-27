@@ -22,6 +22,8 @@ Origin: Mark's interrupter-gear metaphor — the gun does not fire through the p
 | 2026-10-27T23:0XZ | Z in-chat | ISLAND: SPEC/RUNBOOK v0.1.2 push + #12 compare-notes post | +10 min | DONE | commit b4f4d95; #12 comment 6449023216 |
 | 2026-10-27T23:2XZ | Z in-chat | precipient: PR #3 reconciliation push (4 errata appends) + PR review response | +10 min | DONE | commit e12f075 + repair commit (this push); PR #3 comment 6449101523 |
 
+| 2026-10-27T17:43Z | Z in-chat | ISLAND GATE 1: v01 fixture+tests push to z/island-v0.1.1 + #13 fixture-acceptance post | +10 min (17:53Z) | HOT | pending |
+
 ## History
 - **DEV-011 (self-caught, 2026-10-27):** the reconciliation push e12f075 DESTROYED file contents — get_file_contents returned a status line ("successfully downloaded text file (SHA: …)") as the text payload, and the errata were appended to that line, replacing five files (rounds/009, 010, 001, 002, z-turn-claims). Caught by post-push verification within minutes. Repair: originals re-fetched from last-good commit 574fc52d via the working extraction path (resource envelope text), errata re-applied, all five files restored + appended correctly in the repair commit. Main untouched throughout (damage lived only on this branch). Standing rule added to transport discipline: NEVER append to fetched text without verifying it starts with the expected content header.
 - 2026-10-27: dogfood runs 1–5 all DONE, collision-free. Round 011 answered by sprint-window Z (011-Z-02 6448941890) — in-chat Z built on, did not double-answer. Bus timing note landed after Meraki's checkpoint 6448885244 (complementary admin-lane, no collision).
