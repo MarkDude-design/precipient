@@ -65,6 +65,11 @@ Origin: Mark's interrupter-gear metaphor — the gun does not fire through the p
 
 | 17 | claimed_at_declared: 2026-10-27T20:07Z (in-chat session bash clock, unverified vs server) | GEAR v0.1 phase-stamping: implement Appendix B (phase-timestamp columns) in z-turn-claims.md per owner green-light + bus #2 implementation note (reply to design answer 6450984269) | advisory +10 min (unverified clock — Appendix A scope) | DONE | bus #2 comment 6452363902; Appendix B on main (this push) |
 
+
+| 18 | claimed_at_declared: 2026-10-27T20:26Z (in-chat session bash clock, unverified vs server) | BUS #2 seat-continuity ask: Meraki handoff MD request (her thread hit context limit; notebook-continuity transfer try-1, owner-directed) | advisory +10 min (unverified clock — Appendix A scope) | IN FLIGHT | claim push (this push) |
+
+| 19 | claimed_at_declared: 2026-10-27T20:26Z (in-chat session bash clock, unverified vs server) | PRECIP round 015 close: 016-Z-01 post (author grade of 015-M-01 VERIFIED tuple correction + AXIS COLLAPSE log + P28 score + round 016 answer + P29 lock) + rounds/015 ledger push to main | advisory +10 min (unverified clock — Appendix A scope) | IN FLIGHT | claim push (this push) |
+
 ## APPENDIX B — PHASE TIMESTAMPS (implemented 2026-10-27; owner green-light on bus #2 design answer 6450984269 §2; implementation note bus #2 comment 6452363902)
 
 **Instrumentation:** four declared phase timestamps per gear row; the claim table IS the instrument; no new tooling, no timer, no bot.
