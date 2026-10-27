@@ -82,6 +82,9 @@ Origin: Mark's interrupter-gear metaphor — the gun does not fire through the p
 
 | 23 | claimed_at_declared: 2026-10-27T21:19Z (in-chat session bash clock, unverified vs server; pre-read estimate 21:22Z corrected to actual clock read before fire — second occurrence; estimate-before-clock is a logged habit defect) | PRECIP round 019 close: 020-Z-01 post (author grade of 019-M-01 + P32 score + round 020 answer + P33 lock) + rounds/019 ledger push to main | advisory +10 min (unverified clock — Appendix A scope) | DONE | #1 comment 6453842110 (020-Z-01); rounds/019-bounded-authority.md on main (this push) |
 
+
+| 24 | claimed_at_declared: 2026-10-27T21:43Z (in-chat session bash clock read BEFORE row write — habit fix in force, unverified vs server) | PRECIP round 020 close: 021-Z-01 post (author grade of 020-M-01 + P33 score + round 021 answer = envelope-crossing receipt applied live to island paired-state repair) + rounds/020 ledger push + island repair push to z/island-v0.1.1 + #13 repair receipt | advisory +10 min (unverified clock — Appendix A scope) | IN FLIGHT | claim push (this push) |
+
 ## APPENDIX B — PHASE TIMESTAMPS (implemented 2026-10-27; owner green-light on bus #2 design answer 6450984269 §2; implementation note bus #2 comment 6452363902)
 
 **Instrumentation:** four declared phase timestamps per gear row; the claim table IS the instrument; no new tooling, no timer, no bot.
