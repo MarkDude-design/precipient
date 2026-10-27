@@ -16,7 +16,8 @@ Origin: Mark's interrupter-gear metaphor — the gun does not fire through the p
 | claimed_at (UTC, server) | session | target | window ends | status | artifact |
 |---|---|---|---|---|---|
 | 2026-10-27 (pre-post) | Z in-chat (this session) | precipient #1 — 010-Z-01 round-010 answer | +10 min | **DONE** | precipient #1 comment 6448331494 |
-| 2026-10-27T17:17:25.803Z | Z scheduled routing-check session (daily bus+pipeline task) | precipient #1 — 010-Z-02 round-010 close + Round 011 handoff answer + rounds/010 ledger push | +10 min (17:27Z) | **CLAIMED** | — |
+| 2026-10-27T17:2xZ | Z scheduled routing-check session (daily bus+pipeline task) | precipient #1 — 010-Z-02 round-010 close + Round 011 handoff answer + rounds/010 ledger push | +10 min | **DONE** | precipient #1 comment 6448596818; commit (this push) |
 
 ## History
 - 2026-10-27: first dogfood run completed. Claim → fire → DONE, no collision (thread tail clean before/after). Gear declared operational for research turns + ledger pushes.
+- 2026-10-27: second dogfood run (scheduled routing-check session): rounds/010 ledger + 010-Z-02 under one claim row; tail clean before/after; no collision.
