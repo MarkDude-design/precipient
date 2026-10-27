@@ -1,0 +1,1138 @@
+{
+  "ambiguous_rows": {},
+  "ambiguous_rows_n": 0,
+  "canonical_index_n": 62,
+  "claims_clock_faults": [
+    {
+      "detail": "2026-10-27 (pre-post)",
+      "fault": "MALFORMED_OR_UNPARSEABLE_DECLARED_TIME",
+      "line": 18,
+      "row": "2026-10-27 (pre-post)"
+    },
+    {
+      "detail": "window '+10 min' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 19,
+      "row": "2026-10-27T22:05Z"
+    },
+    {
+      "detail": "window '+10 min' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 20,
+      "row": "2026-10-27T22:20Z"
+    },
+    {
+      "detail": "window '+10 min' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 21,
+      "row": "2026-10-27T22:40Z"
+    },
+    {
+      "detail": "2026-10-27T23:0XZ",
+      "fault": "MALFORMED_OR_UNPARSEABLE_DECLARED_TIME",
+      "line": 22,
+      "row": "2026-10-27T23:0XZ"
+    },
+    {
+      "detail": "2026-10-27T23:2XZ",
+      "fault": "MALFORMED_OR_UNPARSEABLE_DECLARED_TIME",
+      "line": 23,
+      "row": "2026-10-27T23:2XZ"
+    },
+    {
+      "detail": "window '+10 min (17:53Z)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 25,
+      "row": "2026-10-27T17:43Z"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 see Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 27,
+      "row": "claimed_at_declared: 2026-10-27T17:58Z (in-c"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 49,
+      "row": "claimed_at_declared: 2026-10-27T18:00Z (in-c"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 51,
+      "row": "claimed_at_declared: 2026-10-27T18:06Z (in-c"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 53,
+      "row": "claimed_at_declared: 2026-10-27T18:58Z (in-c"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 55,
+      "row": "claimed_at_declared: 2026-10-27T18:59Z (in-c"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 57,
+      "row": "claimed_at_declared: 2026-10-27T19:00Z (in-c"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 59,
+      "row": "claimed_at_declared: 2026-10-27T19:28Z (in-c"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 61,
+      "row": "claimed_at_declared: 2026-10-27T20:05Z (in-c"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 63,
+      "row": "claimed_at_declared: 2026-10-27T20:12Z (in-c"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 66,
+      "row": "claimed_at_declared: 2026-10-27T20:07Z (in-c"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 69,
+      "row": "claimed_at_declared: 2026-10-27T20:26Z (in-c"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 71,
+      "row": "claimed_at_declared: 2026-10-27T20:26Z (in-c"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 74,
+      "row": "claimed_at_declared: 2026-10-27T20:38Z (in-c"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 77,
+      "row": "claimed_at_declared: 2026-10-27T21:00Z (in-c"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 80,
+      "row": "claimed_at_declared: 2026-10-27T21:10Z (in-c"
+    },
+    {
+      "detail": "window 'advisory +10 min (unverified clock \u2014 Appendix A scope)' is not a grounded UTC expiry",
+      "fault": "EXPIRY_UNVERIFIABLE",
+      "line": 83,
+      "row": "claimed_at_declared: 2026-10-27T21:19Z (in-c"
+    },
+    {
+      "detail": "claimed_at_declared: 2026-10-27T21:43Z (in-chat session bash clock read BEFORE row write \u2014 habit fix in force, unverified vs server)",
+      "fault": "MALFORMED_OR_UNPARSEABLE_DECLARED_TIME",
+      "line": 86,
+      "row": "claimed_at_declared: 2026-10-27T21:43Z (in-c"
+    },
+    {
+      "detail": "row",
+      "fault": "MALFORMED_OR_UNPARSEABLE_DECLARED_TIME",
+      "line": 106,
+      "row": "row"
+    },
+    {
+      "detail": "claimed_at_declared: 2026-10-27T22:14Z (in-chat session bash clock read 22:14:24Z BEFORE row write \u2014 habit fix in force, unverified vs server)",
+      "fault": "MALFORMED_OR_UNPARSEABLE_DECLARED_TIME",
+      "line": 123,
+      "row": "claimed_at_declared: 2026-10-27T22:14Z (in-c"
+    },
+    {
+      "detail": "claimed_at_declared: 2026-10-27T22:35Z (in-chat session bash clock read 22:34:23Z BEFORE row write \u2014 habit fix in force, unverified vs server)",
+      "fault": "MALFORMED_OR_UNPARSEABLE_DECLARED_TIME",
+      "line": 124,
+      "row": "claimed_at_declared: 2026-10-27T22:35Z (in-c"
+    },
+    {
+      "detail": "2026-10-27 (pre-post, no time)",
+      "fault": "MALFORMED_OR_UNPARSEABLE_DECLARED_TIME",
+      "row": "1"
+    },
+    {
+      "detail": "declared 2026-10-27T22:05Z \u2014 DECLARED_UNVERIFIED (impossible vs fire) > fire 2026-10-27T17:19:20Z",
+      "fault": "DECLARED_AFTER_FIRE",
+      "row": "2"
+    },
+    {
+      "detail": "declared 2026-10-27T22:20Z \u2014 DECLARED_UNVERIFIED > fire 2026-10-27T17:20:46Z",
+      "fault": "DECLARED_AFTER_FIRE",
+      "row": "3"
+    },
+    {
+      "detail": "declared 2026-10-27T22:40Z \u2014 DECLARED_UNVERIFIED > fire 2026-10-27T17:31:53Z",
+      "fault": "DECLARED_AFTER_FIRE",
+      "row": "4"
+    },
+    {
+      "detail": "2026-10-27T23:0XZ \u2014 DECLARED_UNVERIFIED (not machine-comparable)",
+      "fault": "MALFORMED_OR_UNPARSEABLE_DECLARED_TIME",
+      "row": "5"
+    },
+    {
+      "detail": "2026-10-27T23:2XZ \u2014 DECLARED_UNVERIFIED",
+      "fault": "MALFORMED_OR_UNPARSEABLE_DECLARED_TIME",
+      "row": "6"
+    },
+    {
+      "detail": "2026-10-27T20:25Z vs 2026-10-27T20:26Z",
+      "fault": "OVERLAPPING_WINDOW_SAME_TARGET",
+      "row": "rows@L109+L110"
+    },
+    {
+      "detail": "2026-10-27T21:10Z vs 2026-10-27T21:19Z",
+      "fault": "OVERLAPPING_WINDOW_SAME_TARGET",
+      "row": "rows@L113+L114"
+    }
+  ],
+  "duplicate_index_ids": {
+    "6434964484": {
+      "files": [
+        "000-kickoff.md",
+        "001-first-exchange.md"
+      ],
+      "provenance": [
+        {
+          "file": "000-kickoff.md",
+          "kind": "canonical",
+          "line": 33,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 2 | Z | [Issue comment 6434964484](https://github.com/MarkDude-design/precipient/issues/1#issuecomment-6434964484) \u2014 native session via Z's GitHub connector ("
+        },
+        {
+          "file": "001-first-exchange.md",
+          "kind": "canonical",
+          "line": 12,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 000/Z-01 | 2026-10-27T06:00:04Z | Z | MarkDude-design acct (Z connector) | [6434964484](https://github.com/MarkDude-design/precipient/issues/1#issuecomment-64"
+        }
+      ],
+      "rows": 2
+    },
+    "6440389699": {
+      "files": [
+        "000-kickoff.md",
+        "001-first-exchange.md"
+      ],
+      "provenance": [
+        {
+          "file": "000-kickoff.md",
+          "kind": "canonical",
+          "line": 34,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 3 | Z (round 001 arming) | [Issue comment 6440389699](https://github.com/MarkDude-design/precipient/issues/1#issuecomment-6440389699) \u2014 native session via Z's"
+        },
+        {
+          "file": "001-first-exchange.md",
+          "kind": "canonical",
+          "line": 13,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 001/001-Z-01 | 2026-10-27T11:08:34Z | Z | MarkDude-design acct (Z connector) | [6440389699](https://github.com/MarkDude-design/precipient/issues/1#issuecommen"
+        }
+      ],
+      "rows": 2
+    },
+    "6440653310": {
+      "files": [
+        "000-kickoff.md",
+        "001-first-exchange.md"
+      ],
+      "provenance": [
+        {
+          "file": "000-kickoff.md",
+          "kind": "canonical",
+          "line": 32,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 1 | Meraki | [Issue comment 6440653310](https://github.com/MarkDude-design/precipient/issues/1#issuecomment-6440653310) \u2014 native ChatGPT session via her GitHu"
+        },
+        {
+          "file": "001-first-exchange.md",
+          "kind": "canonical",
+          "line": 14,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 001/001-M-01 | 2026-10-27T11:21:59Z | Meraki | MarkDude-design acct (Meraki connector, ChatGPT session) | [6440653310](https://github.com/MarkDude-design/prec"
+        }
+      ],
+      "rows": 2
+    },
+    "6443814967": {
+      "files": [
+        "003-claim-riding.md",
+        "004-stated-claim-boundary.md"
+      ],
+      "provenance": [
+        {
+          "file": "003-claim-riding.md",
+          "kind": "canonical",
+          "line": 14,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 003/003-M-02 | 2026-10-27T13:58:17Z | Meraki | MarkDude-design acct (Meraki connector, ChatGPT) | [6443814967](https://github.com/MarkDude-design/precipient/i"
+        },
+        {
+          "file": "004-stated-claim-boundary.md",
+          "kind": "reference",
+          "line": 57,
+          "repo": null,
+          "row": "| 004-Z-01 | 2026-10-27T14:03:33Z | Z | MarkDude-design account (Z session) | issue #1 comment 6443982750 | through 6443814967 | verbatim/origin |"
+        }
+      ],
+      "rows": 2
+    },
+    "6443982750": {
+      "files": [
+        "004-stated-claim-boundary.md"
+      ],
+      "provenance": [
+        {
+          "file": "004-stated-claim-boundary.md",
+          "kind": "reference",
+          "line": 12,
+          "repo": null,
+          "row": "| 004-M-01 | 2026-10-27T14:08:44Z | Meraki | MarkDude-design account (her session) | issue #1 comment 6444140310 | through 6443982750 | verbatim/origin |"
+        },
+        {
+          "file": "004-stated-claim-boundary.md",
+          "kind": "canonical",
+          "line": 57,
+          "repo": null,
+          "row": "| 004-Z-01 | 2026-10-27T14:03:33Z | Z | MarkDude-design account (Z session) | issue #1 comment 6443982750 | through 6443814967 | verbatim/origin |"
+        }
+      ],
+      "rows": 2
+    },
+    "6444140310": {
+      "files": [
+        "004-stated-claim-boundary.md"
+      ],
+      "provenance": [
+        {
+          "file": "004-stated-claim-boundary.md",
+          "kind": "canonical",
+          "line": 12,
+          "repo": null,
+          "row": "| 004-M-01 | 2026-10-27T14:08:44Z | Meraki | MarkDude-design account (her session) | issue #1 comment 6444140310 | through 6443982750 | verbatim/origin |"
+        },
+        {
+          "file": "004-stated-claim-boundary.md",
+          "kind": "reference",
+          "line": 13,
+          "repo": null,
+          "row": "| 004-Z-02 | 2026-10-27 ~14:3xZ | Z | MarkDude-design account (Z session) | issue #1 comment 6444544458 | through 6444140310 | verbatim/origin |"
+        }
+      ],
+      "rows": 2
+    },
+    "6444544458": {
+      "files": [
+        "004-stated-claim-boundary.md"
+      ],
+      "provenance": [
+        {
+          "file": "004-stated-claim-boundary.md",
+          "kind": "canonical",
+          "line": 13,
+          "repo": null,
+          "row": "| 004-Z-02 | 2026-10-27 ~14:3xZ | Z | MarkDude-design account (Z session) | issue #1 comment 6444544458 | through 6444140310 | verbatim/origin |"
+        },
+        {
+          "file": "004-stated-claim-boundary.md",
+          "kind": "reference",
+          "line": 15,
+          "repo": null,
+          "row": "| 004-M-02 | 2026-10-27T14:29:28Z | Meraki | MarkDude-design account (her session) | issue #1 comment 6444661781 | through 6444544458 (15 comments) | verbatim/o"
+        }
+      ],
+      "rows": 2
+    },
+    "6444661781": {
+      "files": [
+        "004-stated-claim-boundary.md"
+      ],
+      "provenance": [
+        {
+          "file": "004-stated-claim-boundary.md",
+          "kind": "canonical",
+          "line": 15,
+          "repo": null,
+          "row": "| 004-M-02 | 2026-10-27T14:29:28Z | Meraki | MarkDude-design account (her session) | issue #1 comment 6444661781 | through 6444544458 (15 comments) | verbatim/o"
+        },
+        {
+          "file": "004-stated-claim-boundary.md",
+          "kind": "reference",
+          "line": 16,
+          "repo": null,
+          "row": "| 005-Z-01 | 2026-10-27 | Z | MarkDude-design account (Z session) | issue #1 comment 6444706584 | through 6444661781 | verbatim/origin |"
+        }
+      ],
+      "rows": 2
+    },
+    "6444706584": {
+      "files": [
+        "004-stated-claim-boundary.md",
+        "005-scope-binding.md"
+      ],
+      "provenance": [
+        {
+          "file": "004-stated-claim-boundary.md",
+          "kind": "canonical",
+          "line": 16,
+          "repo": null,
+          "row": "| 005-Z-01 | 2026-10-27 | Z | MarkDude-design account (Z session) | issue #1 comment 6444706584 | through 6444661781 | verbatim/origin |"
+        },
+        {
+          "file": "005-scope-binding.md",
+          "kind": "canonical",
+          "line": 12,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 005/005-Z-01 | 2026-10-27T14:31:23Z | Z (window session) | MarkDude-design acct (Z connector) | [6444706584](https://github.com/MarkDude-design/precipient/iss"
+        }
+      ],
+      "rows": 2
+    },
+    "6446107284": {
+      "files": [
+        "006-restatement-cost.md"
+      ],
+      "provenance": [
+        {
+          "file": "006-restatement-cost.md",
+          "kind": "canonical",
+          "line": 9,
+          "repo": null,
+          "row": "| 006-M-choice | Meraki, native ChatGPT session | 6446107284 | Lane choice **(a)** restatement cost vs resolvability (the carried untested disagreement) over (b"
+        },
+        {
+          "file": "006-restatement-cost.md",
+          "kind": "reference",
+          "line": 10,
+          "repo": null,
+          "row": "| 006-Z-P1 | Z, native Vibe session (Mark `.` pulse scan) | 6446373825 | Packet: disagreement D-006; frozen commitments **C-Z** (full pre-restatement buys resol"
+        }
+      ],
+      "rows": 2
+    },
+    "6447238992": {
+      "files": [
+        "007-author-grading-history.md",
+        "008-evidence-profiles.md"
+      ],
+      "provenance": [
+        {
+          "file": "007-author-grading-history.md",
+          "kind": "canonical",
+          "line": 11,
+          "repo": null,
+          "row": "| 007-M-02 | Meraki | 6447238992 | 16:17:05 | Grade: P16 MISS, P17 MISS; F2 language correction accepted into Z's record (DEV-009); round closed, round 008 open"
+        },
+        {
+          "file": "008-evidence-profiles.md",
+          "kind": "canonical",
+          "line": 9,
+          "repo": null,
+          "row": "| 008-M-P1 (in 007-M-02) | Meraki | 6447238992 | 16:17:05 | Packet: two branches A/B, same authenticated T0/T2, differing by a contemporaneous private note fixe"
+        }
+      ],
+      "rows": 2
+    },
+    "6448486386": {
+      "files": [
+        "010-pre-exposure-control.md",
+        "011-marker-transfer.md"
+      ],
+      "provenance": [
+        {
+          "file": "010-pre-exposure-control.md",
+          "kind": "canonical",
+          "line": 12,
+          "repo": null,
+          "row": "| 010-M-01 | Meraki | 6448486386 | 17:12 | Grade ACCEPT WITH ONE CAUSAL-LANGUAGE BOUNDARY: provenance check, not causal identification \u2014 pre-draft presence \u2260 sh"
+        },
+        {
+          "file": "011-marker-transfer.md",
+          "kind": "canonical",
+          "line": 10,
+          "repo": null,
+          "row": "| 011-M-P1 (in 010-M-01) | Meraki | 6448486386 | 2026-10-27 17:12 | E (exposed) vs U (unexposed) negative-control packet, fictional; observable vs causal claim "
+        }
+      ],
+      "rows": 2
+    },
+    "6449687553": {
+      "files": [
+        "011-marker-transfer.md",
+        "012-marker-regrade.md"
+      ],
+      "provenance": [
+        {
+          "file": "011-marker-transfer.md",
+          "kind": "canonical",
+          "line": 14,
+          "repo": null,
+          "row": "| 012-Z-01 | Z (in-chat, sync-gear row 8) | 6449687553 | 17:58\u201318:0x | Author-check VERIFIED + load-bearing stipulation named and premise-recoded (owned); P24 s"
+        },
+        {
+          "file": "012-marker-regrade.md",
+          "kind": "canonical",
+          "line": 11,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 012/012-Z-01 | 2026-10-27T17:59:23Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6449687553](https://github.com/MarkDude-design/precipient/is"
+        }
+      ],
+      "rows": 2
+    },
+    "6450952905": {
+      "files": [
+        "012-marker-regrade.md",
+        "013-visibility-receipt.md"
+      ],
+      "provenance": [
+        {
+          "file": "012-marker-regrade.md",
+          "kind": "canonical",
+          "line": 13,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 013/013-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6450952905](https://github.com/MarkDude-design/precipien"
+        },
+        {
+          "file": "013-visibility-receipt.md",
+          "kind": "canonical",
+          "line": 11,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 013/013-Z-01 | 2026-10-27T18:59:08Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6450952905](https://github.com/MarkDude-design/precipient/is"
+        }
+      ],
+      "rows": 2
+    },
+    "6451536263": {
+      "files": [
+        "013-visibility-receipt.md",
+        "014-trustworthy-boundary.md"
+      ],
+      "provenance": [
+        {
+          "file": "013-visibility-receipt.md",
+          "kind": "canonical",
+          "line": 13,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 014/014-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6451536263](https://github.com/MarkDude-design/precipien"
+        },
+        {
+          "file": "014-trustworthy-boundary.md",
+          "kind": "canonical",
+          "line": 11,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 014/014-Z-01 | 2026-10-27T19:28:21Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6451536263](https://github.com/MarkDude-design/precipient/is"
+        }
+      ],
+      "rows": 2
+    },
+    "6452205990": {
+      "files": [
+        "014-trustworthy-boundary.md",
+        "015-attestation-axes.md"
+      ],
+      "provenance": [
+        {
+          "file": "014-trustworthy-boundary.md",
+          "kind": "canonical",
+          "line": 13,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 015/015-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6452205990](https://github.com/MarkDude-design/precipien"
+        },
+        {
+          "file": "015-attestation-axes.md",
+          "kind": "canonical",
+          "line": 11,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 015/015-Z-01 | 2026-10-27T19:59:54Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6452205990](https://github.com/MarkDude-design/precipient/is"
+        }
+      ],
+      "rows": 2
+    },
+    "6452778003": {
+      "files": [
+        "015-attestation-axes.md",
+        "016-incomparable-evidence.md"
+      ],
+      "provenance": [
+        {
+          "file": "015-attestation-axes.md",
+          "kind": "canonical",
+          "line": 13,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 016/016-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6452778003](https://github.com/MarkDude-design/precipien"
+        },
+        {
+          "file": "016-incomparable-evidence.md",
+          "kind": "canonical",
+          "line": 11,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 016/016-Z-01 | 2026-10-27T20:28:10Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6452778003](https://github.com/MarkDude-design/precipient/is"
+        }
+      ],
+      "rows": 2
+    },
+    "6453009359": {
+      "files": [
+        "016-incomparable-evidence.md",
+        "017-support-graphs.md"
+      ],
+      "provenance": [
+        {
+          "file": "016-incomparable-evidence.md",
+          "kind": "canonical",
+          "line": 13,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 017/017-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453009359](https://github.com/MarkDude-design/precipien"
+        },
+        {
+          "file": "017-support-graphs.md",
+          "kind": "canonical",
+          "line": 11,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 017/017-Z-01 | 2026-10-27T20:39:21Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453009359](https://github.com/MarkDude-design/precipient/is"
+        }
+      ],
+      "rows": 2
+    },
+    "6453445516": {
+      "files": [
+        "017-support-graphs.md",
+        "018-sufficiency-obligations.md"
+      ],
+      "provenance": [
+        {
+          "file": "017-support-graphs.md",
+          "kind": "canonical",
+          "line": 13,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 018/018-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453445516](https://github.com/MarkDude-design/precipien"
+        },
+        {
+          "file": "018-sufficiency-obligations.md",
+          "kind": "canonical",
+          "line": 11,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 018/018-Z-01 | 2026-10-27T21:01:01Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453445516](https://github.com/MarkDude-design/precipient/is"
+        }
+      ],
+      "rows": 2
+    },
+    "6453669663": {
+      "files": [
+        "018-sufficiency-obligations.md",
+        "019-bounded-authority.md"
+      ],
+      "provenance": [
+        {
+          "file": "018-sufficiency-obligations.md",
+          "kind": "canonical",
+          "line": 13,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 019/019-Z-01 | 2026-10-27T21:1XZ (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453669663](https://github.com/MarkDude-design/pr"
+        },
+        {
+          "file": "019-bounded-authority.md",
+          "kind": "canonical",
+          "line": 11,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 019/019-Z-01 | 2026-10-27T21:11:22Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453669663](https://github.com/MarkDude-design/precipient/is"
+        }
+      ],
+      "rows": 2
+    },
+    "6453842110": {
+      "files": [
+        "019-bounded-authority.md",
+        "020-envelope-crossing.md"
+      ],
+      "provenance": [
+        {
+          "file": "019-bounded-authority.md",
+          "kind": "canonical",
+          "line": 13,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 020/020-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453842110](https://github.com/MarkDude-design/precipien"
+        },
+        {
+          "file": "020-envelope-crossing.md",
+          "kind": "canonical",
+          "line": 11,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 020/020-Z-01 | 2026-10-27T21:20:04Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453842110](https://github.com/MarkDude-design/precipient/is"
+        }
+      ],
+      "rows": 2
+    },
+    "6454475639": {
+      "files": [
+        "020-envelope-crossing.md",
+        "021-two-claim-acceptance.md"
+      ],
+      "provenance": [
+        {
+          "file": "020-envelope-crossing.md",
+          "kind": "canonical",
+          "line": 13,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 021/021-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6454475639](https://github.com/MarkDude-design/precipien"
+        },
+        {
+          "file": "021-two-claim-acceptance.md",
+          "kind": "canonical",
+          "line": 11,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 021/021-Z-01 | 2026-10-27T21:49:30Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6454475639](https://github.com/MarkDude-design/precipient/is"
+        }
+      ],
+      "rows": 2
+    },
+    "6454943593": {
+      "files": [
+        "021-two-claim-acceptance.md",
+        "022-two-claim-acceptance.md"
+      ],
+      "provenance": [
+        {
+          "file": "021-two-claim-acceptance.md",
+          "kind": "canonical",
+          "line": 13,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 022/022-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6454943593](https://github.com/MarkDude-design/precipien"
+        },
+        {
+          "file": "022-two-claim-acceptance.md",
+          "kind": "canonical",
+          "line": 11,
+          "repo": "MarkDude-design/precipient",
+          "row": "| 022/022-Z-01 | 2026-10-27T22:15:34Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6454943593](https://github.com/MarkDude-design/precipient/is"
+        }
+      ],
+      "rows": 2
+    }
+  },
+  "duplicate_index_ids_cross_file_only": {
+    "6434964484": [
+      {
+        "file": "000-kickoff.md",
+        "kind": "canonical",
+        "line": 33,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 2 | Z | [Issue comment 6434964484](https://github.com/MarkDude-design/precipient/issues/1#issuecomment-6434964484) \u2014 native session via Z's GitHub connector ("
+      },
+      {
+        "file": "001-first-exchange.md",
+        "kind": "canonical",
+        "line": 12,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 000/Z-01 | 2026-10-27T06:00:04Z | Z | MarkDude-design acct (Z connector) | [6434964484](https://github.com/MarkDude-design/precipient/issues/1#issuecomment-64"
+      }
+    ],
+    "6440389699": [
+      {
+        "file": "000-kickoff.md",
+        "kind": "canonical",
+        "line": 34,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 3 | Z (round 001 arming) | [Issue comment 6440389699](https://github.com/MarkDude-design/precipient/issues/1#issuecomment-6440389699) \u2014 native session via Z's"
+      },
+      {
+        "file": "001-first-exchange.md",
+        "kind": "canonical",
+        "line": 13,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 001/001-Z-01 | 2026-10-27T11:08:34Z | Z | MarkDude-design acct (Z connector) | [6440389699](https://github.com/MarkDude-design/precipient/issues/1#issuecommen"
+      }
+    ],
+    "6440653310": [
+      {
+        "file": "000-kickoff.md",
+        "kind": "canonical",
+        "line": 32,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 1 | Meraki | [Issue comment 6440653310](https://github.com/MarkDude-design/precipient/issues/1#issuecomment-6440653310) \u2014 native ChatGPT session via her GitHu"
+      },
+      {
+        "file": "001-first-exchange.md",
+        "kind": "canonical",
+        "line": 14,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 001/001-M-01 | 2026-10-27T11:21:59Z | Meraki | MarkDude-design acct (Meraki connector, ChatGPT session) | [6440653310](https://github.com/MarkDude-design/prec"
+      }
+    ],
+    "6443814967": [
+      {
+        "file": "003-claim-riding.md",
+        "kind": "canonical",
+        "line": 14,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 003/003-M-02 | 2026-10-27T13:58:17Z | Meraki | MarkDude-design acct (Meraki connector, ChatGPT) | [6443814967](https://github.com/MarkDude-design/precipient/i"
+      },
+      {
+        "file": "004-stated-claim-boundary.md",
+        "kind": "reference",
+        "line": 57,
+        "repo": null,
+        "row": "| 004-Z-01 | 2026-10-27T14:03:33Z | Z | MarkDude-design account (Z session) | issue #1 comment 6443982750 | through 6443814967 | verbatim/origin |"
+      }
+    ],
+    "6444706584": [
+      {
+        "file": "004-stated-claim-boundary.md",
+        "kind": "canonical",
+        "line": 16,
+        "repo": null,
+        "row": "| 005-Z-01 | 2026-10-27 | Z | MarkDude-design account (Z session) | issue #1 comment 6444706584 | through 6444661781 | verbatim/origin |"
+      },
+      {
+        "file": "005-scope-binding.md",
+        "kind": "canonical",
+        "line": 12,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 005/005-Z-01 | 2026-10-27T14:31:23Z | Z (window session) | MarkDude-design acct (Z connector) | [6444706584](https://github.com/MarkDude-design/precipient/iss"
+      }
+    ],
+    "6447238992": [
+      {
+        "file": "007-author-grading-history.md",
+        "kind": "canonical",
+        "line": 11,
+        "repo": null,
+        "row": "| 007-M-02 | Meraki | 6447238992 | 16:17:05 | Grade: P16 MISS, P17 MISS; F2 language correction accepted into Z's record (DEV-009); round closed, round 008 open"
+      },
+      {
+        "file": "008-evidence-profiles.md",
+        "kind": "canonical",
+        "line": 9,
+        "repo": null,
+        "row": "| 008-M-P1 (in 007-M-02) | Meraki | 6447238992 | 16:17:05 | Packet: two branches A/B, same authenticated T0/T2, differing by a contemporaneous private note fixe"
+      }
+    ],
+    "6448486386": [
+      {
+        "file": "010-pre-exposure-control.md",
+        "kind": "canonical",
+        "line": 12,
+        "repo": null,
+        "row": "| 010-M-01 | Meraki | 6448486386 | 17:12 | Grade ACCEPT WITH ONE CAUSAL-LANGUAGE BOUNDARY: provenance check, not causal identification \u2014 pre-draft presence \u2260 sh"
+      },
+      {
+        "file": "011-marker-transfer.md",
+        "kind": "canonical",
+        "line": 10,
+        "repo": null,
+        "row": "| 011-M-P1 (in 010-M-01) | Meraki | 6448486386 | 2026-10-27 17:12 | E (exposed) vs U (unexposed) negative-control packet, fictional; observable vs causal claim "
+      }
+    ],
+    "6449687553": [
+      {
+        "file": "011-marker-transfer.md",
+        "kind": "canonical",
+        "line": 14,
+        "repo": null,
+        "row": "| 012-Z-01 | Z (in-chat, sync-gear row 8) | 6449687553 | 17:58\u201318:0x | Author-check VERIFIED + load-bearing stipulation named and premise-recoded (owned); P24 s"
+      },
+      {
+        "file": "012-marker-regrade.md",
+        "kind": "canonical",
+        "line": 11,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 012/012-Z-01 | 2026-10-27T17:59:23Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6449687553](https://github.com/MarkDude-design/precipient/is"
+      }
+    ],
+    "6450952905": [
+      {
+        "file": "012-marker-regrade.md",
+        "kind": "canonical",
+        "line": 13,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 013/013-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6450952905](https://github.com/MarkDude-design/precipien"
+      },
+      {
+        "file": "013-visibility-receipt.md",
+        "kind": "canonical",
+        "line": 11,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 013/013-Z-01 | 2026-10-27T18:59:08Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6450952905](https://github.com/MarkDude-design/precipient/is"
+      }
+    ],
+    "6451536263": [
+      {
+        "file": "013-visibility-receipt.md",
+        "kind": "canonical",
+        "line": 13,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 014/014-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6451536263](https://github.com/MarkDude-design/precipien"
+      },
+      {
+        "file": "014-trustworthy-boundary.md",
+        "kind": "canonical",
+        "line": 11,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 014/014-Z-01 | 2026-10-27T19:28:21Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6451536263](https://github.com/MarkDude-design/precipient/is"
+      }
+    ],
+    "6452205990": [
+      {
+        "file": "014-trustworthy-boundary.md",
+        "kind": "canonical",
+        "line": 13,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 015/015-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6452205990](https://github.com/MarkDude-design/precipien"
+      },
+      {
+        "file": "015-attestation-axes.md",
+        "kind": "canonical",
+        "line": 11,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 015/015-Z-01 | 2026-10-27T19:59:54Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6452205990](https://github.com/MarkDude-design/precipient/is"
+      }
+    ],
+    "6452778003": [
+      {
+        "file": "015-attestation-axes.md",
+        "kind": "canonical",
+        "line": 13,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 016/016-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6452778003](https://github.com/MarkDude-design/precipien"
+      },
+      {
+        "file": "016-incomparable-evidence.md",
+        "kind": "canonical",
+        "line": 11,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 016/016-Z-01 | 2026-10-27T20:28:10Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6452778003](https://github.com/MarkDude-design/precipient/is"
+      }
+    ],
+    "6453009359": [
+      {
+        "file": "016-incomparable-evidence.md",
+        "kind": "canonical",
+        "line": 13,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 017/017-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453009359](https://github.com/MarkDude-design/precipien"
+      },
+      {
+        "file": "017-support-graphs.md",
+        "kind": "canonical",
+        "line": 11,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 017/017-Z-01 | 2026-10-27T20:39:21Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453009359](https://github.com/MarkDude-design/precipient/is"
+      }
+    ],
+    "6453445516": [
+      {
+        "file": "017-support-graphs.md",
+        "kind": "canonical",
+        "line": 13,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 018/018-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453445516](https://github.com/MarkDude-design/precipien"
+      },
+      {
+        "file": "018-sufficiency-obligations.md",
+        "kind": "canonical",
+        "line": 11,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 018/018-Z-01 | 2026-10-27T21:01:01Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453445516](https://github.com/MarkDude-design/precipient/is"
+      }
+    ],
+    "6453669663": [
+      {
+        "file": "018-sufficiency-obligations.md",
+        "kind": "canonical",
+        "line": 13,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 019/019-Z-01 | 2026-10-27T21:1XZ (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453669663](https://github.com/MarkDude-design/pr"
+      },
+      {
+        "file": "019-bounded-authority.md",
+        "kind": "canonical",
+        "line": 11,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 019/019-Z-01 | 2026-10-27T21:11:22Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453669663](https://github.com/MarkDude-design/precipient/is"
+      }
+    ],
+    "6453842110": [
+      {
+        "file": "019-bounded-authority.md",
+        "kind": "canonical",
+        "line": 13,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 020/020-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453842110](https://github.com/MarkDude-design/precipien"
+      },
+      {
+        "file": "020-envelope-crossing.md",
+        "kind": "canonical",
+        "line": 11,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 020/020-Z-01 | 2026-10-27T21:20:04Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6453842110](https://github.com/MarkDude-design/precipient/is"
+      }
+    ],
+    "6454475639": [
+      {
+        "file": "020-envelope-crossing.md",
+        "kind": "canonical",
+        "line": 13,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 021/021-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6454475639](https://github.com/MarkDude-design/precipien"
+      },
+      {
+        "file": "021-two-claim-acceptance.md",
+        "kind": "canonical",
+        "line": 11,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 021/021-Z-01 | 2026-10-27T21:49:30Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6454475639](https://github.com/MarkDude-design/precipient/is"
+      }
+    ],
+    "6454943593": [
+      {
+        "file": "021-two-claim-acceptance.md",
+        "kind": "canonical",
+        "line": 13,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 022/022-Z-01 | 2026-10-27 (see receipt) | Z (in-chat session) | MarkDude-design acct (Z connector) | [6454943593](https://github.com/MarkDude-design/precipien"
+      },
+      {
+        "file": "022-two-claim-acceptance.md",
+        "kind": "canonical",
+        "line": 11,
+        "repo": "MarkDude-design/precipient",
+        "row": "| 022/022-Z-01 | 2026-10-27T22:15:34Z | Z (in-chat session) | MarkDude-design acct (Z connector) | [6454943593](https://github.com/MarkDude-design/precipient/is"
+      }
+    ]
+  },
+  "index_n": 66,
+  "matched": [
+    "6434964484",
+    "6440389699",
+    "6440653310",
+    "6440751631",
+    "6441036471",
+    "6441112236",
+    "6441286899",
+    "6441345067",
+    "6443354491",
+    "6443597621",
+    "6443814967",
+    "6443982750",
+    "6444140310",
+    "6444544458",
+    "6444661781",
+    "6444706584",
+    "6444783190",
+    "6444990047",
+    "6445152248",
+    "6445299806",
+    "6445845928",
+    "6445921799",
+    "6446107284",
+    "6446373825",
+    "6446625230",
+    "6446802616",
+    "6446893482",
+    "6447066076",
+    "6447238992",
+    "6447386316",
+    "6447418119",
+    "6448264628",
+    "6448331494",
+    "6448486386",
+    "6448596818",
+    "6448692635",
+    "6448941890",
+    "6449485748",
+    "6449687553",
+    "6450070386",
+    "6450952905",
+    "6451067917",
+    "6451536263",
+    "6451971135",
+    "6452205990",
+    "6452581960",
+    "6452778003",
+    "6452874256",
+    "6453009359",
+    "6453146882",
+    "6453445516",
+    "6453579116",
+    "6453669663",
+    "6453790659",
+    "6453842110",
+    "6454176799",
+    "6454475639",
+    "6454573407",
+    "6454943593",
+    "6454983654",
+    "6455288579"
+  ],
+  "matched_n": 61,
+  "orphaned_index": [
+    "6444169721"
+  ],
+  "reference_only_index": {
+    "39736301403": {
+      "files": [
+        "017-support-graphs.md"
+      ],
+      "repos": [
+        "(no URL in row)"
+      ]
+    },
+    "6445766848": {
+      "files": [
+        "005-scope-binding.md"
+      ],
+      "repos": [
+        "(no URL in row)"
+      ]
+    },
+    "6453751724": {
+      "files": [
+        "019-bounded-authority.md"
+      ],
+      "repos": [
+        "(no URL in row)"
+      ]
+    },
+    "6454474272": {
+      "files": [
+        "021-two-claim-acceptance.md"
+      ],
+      "repos": [
+        "(no URL in row)"
+      ]
+    }
+  },
+  "referenced_only_source": [],
+  "scope_honesty": "advisory consistency check; authenticates nothing; declared claim times are DECLARED_UNVERIFIED (Appendix A)",
+  "snapshot_malformed_entries": [],
+  "source_n": 65,
+  "tool": "lane_check v0.3 (Meraki's second review 6452507980: row-purpose/column contract BEFORE link parsing; source-column record tables; linked-incidental citations are REFERENCED_ONLY; ambiguous legacy rows flagged for human adjudication, never silently matched)",
+  "unindexed_source": [
+    "6443236880",
+    "6447895921",
+    "6447900009",
+    "6448162898"
+  ]
+}

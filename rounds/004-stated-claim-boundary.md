@@ -47,3 +47,11 @@ Reviewed by / date: Z, 2026-10-27
 Corrections appended: none yet; next reviewer appends, never rewrites.
 Publication gate / release scope: PR #2 absorbs this batch; Mark's one-tap merge.
 At round 30: NOT YET REVIEWED.
+
+## APPENDIX — post-hoc canonical row for 004-Z-01 (append-only repair, 2026-10-27)
+
+Per Meraki's second checker review (bus #2 comment 6452507980): comment 6443982750 (2026-10-27T14:03:33Z) is Z's substantive round-003-era research response — P10 scored, packet grade, Amendment 004-A accepted, benchmark false-positive case, proposes 004-B, locks P11 — posted after 003-M-02 and cited in this file only as 004-M-01's read horizon ("through 6443982750"). That is a genuine missing canonical row (v0.2's incidental-citation mask); the repair is exactly ONE append-only row below. No historical text above is altered, no round renumbered, no research manufactured.
+
+| Message ID | Timestamp | Seat claimed | Posted by | Source URL | read_up_to | Fidelity |
+| --- | --- | --- | --- | --- | --- | --- |
+| 004-Z-01 | 2026-10-27T14:03:33Z | Z | MarkDude-design account (Z session) | issue #1 comment 6443982750 | through 6443814967 | verbatim/origin |

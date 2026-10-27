@@ -170,10 +170,6 @@ class Dev011Guard(unittest.TestCase):
         self.assertGreaterEqual(len(appendix), 5)
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class RowKindClassification(unittest.TestCase):
     """Her false-negative fix (6450082179): incidental citation must NOT mask a
     missing handoff. Three-case fixture on the same valid source ID:
@@ -232,3 +228,121 @@ class RowKindClassification(unittest.TestCase):
             self.assertTrue(any(
                 hint.endswith("ALLurbaseRnotbelong2us")
                 for hint in r["reference_only_index"]["6444169721"]["repos"]))
+
+
+class V03RowPurposeContract(unittest.TestCase):
+    """v0.3 (her second review, bus #2 6452507980): the ROW'S PURPOSE is
+    determined BEFORE link parsing.
+
+    (1) Her must-FLAG linked-incidental fixture — a markdown link to
+        precipient in a NON-record row must be REFERENCED_ONLY, never MATCHED
+        (v0.2's rule (i) masked this missing-handoff class).
+    (2) In a headered record table, ONLY the source column records: the
+        `through <id>` horizon cell and other embeds are references.
+    (3) The legacy `issue #1 comment <id>` record form still matches — in the
+        source column of a record table.
+    (4) Ambiguous legacy rows (non-record, ≥3 cells, bare-ID cell or local
+        link) land in ambiguous_rows for HUMAN adjudication — classified
+        reference, never silently matched; 2-cell fixtures stay plain
+        reference, not ambiguous.
+    """
+
+    CID = "6443236880"  # her exact fixture ID
+    LOCAL = "https://github.com/MarkDude-design/precipient/issues/1#issuecomment-"
+
+    HDR7 = ("| Message ID | Timestamp | Seat claimed | Posted by | Source URL "
+            "| read_up_to | Fidelity |\n| --- | --- | --- | --- | --- | --- | --- |\n")
+
+    def _run(self, rounds_text):
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            snap = _snapshot(tmp, [(int(self.CID), "2026-10-27T13:35:12Z"),
+                                   (6444140310, "2026-10-27T14:08:44Z"),
+                                   (6443814967, "2026-10-27T14:01:02Z")])
+            rounds = _rounds_dir(tmp, {"round-x.md": rounds_text})
+            return run_check(snap, rounds, None)
+
+    def test_linked_incidental_is_referenced_only(self):
+        # Her exact must-FLAG fixture: local-repo markdown link in a NON-record
+        # row — v0.2 matched it; v0.3 must report REFERENCED_ONLY.
+        r = self._run("| Admin note mentions | [%s](%s%s) |\n"
+                      % (self.CID, self.LOCAL, self.CID))
+        self.assertEqual(r["matched"], [])
+        self.assertEqual(r["referenced_only_source"], [self.CID])
+        # 2-cell fixture: plain reference, NOT ambiguous
+        self.assertEqual(r["ambiguous_rows"], {})
+        self.assertEqual(r["ambiguous_rows_n"], 0)
+
+    def test_ambiguous_legacy_row_flagged_for_human(self):
+        # Non-record row, ≥3 cells, local link: still reference (over-flag),
+        # but surfaced in ambiguous_rows for human adjudication.
+        r = self._run("| admin | note | [%s](%s%s) | context |\n"
+                      % (self.CID, self.LOCAL, self.CID))
+        self.assertEqual(r["matched"], [])
+        self.assertEqual(r["referenced_only_source"], [self.CID])
+        self.assertEqual(r["ambiguous_rows_n"], 1)
+        self.assertIn("round-x.md", r["ambiguous_rows"])
+
+    def test_ambiguous_bare_id_row_flagged_for_human(self):
+        # Her point (3): ambiguous legacy rows are never silently MATCHED.
+        r = self._run("| 004 | admin note | %s | context |\n" % self.CID)
+        self.assertEqual(r["matched"], [])
+        self.assertEqual(r["referenced_only_source"], [self.CID])
+        self.assertEqual(r["ambiguous_rows_n"], 1)
+
+    def test_headered_record_table_source_column_only(self):
+        # Column contract: `issue #1 comment <id>` in the Source URL column is
+        # the canonical record; the read_up_to `through <id>` horizon is a
+        # reference — one row records one message.
+        r = self._run(self.HDR7 +
+                      "| 004-M-01 | 2026-10-27T14:08:44Z | Meraki | acct "
+                      "| issue #1 comment 6444140310 | through %s | verbatim/origin |\n"
+                      % self.CID)
+        self.assertEqual(r["matched"], ["6444140310"])
+        self.assertEqual(r["referenced_only_source"], [self.CID])
+        self.assertEqual(r["orphaned_index"], [])
+
+    def test_headered_table_summary_links_are_references(self):
+        # v0.2 rule (i) defect, restated on a real 012+ ledger shape: a local
+        # link inside the SUMMARY column of a record row must NOT match; only
+        # the Source URL column records.
+        r = self._run(self.HDR7 +
+                      "| 004-M-01 | 2026-10-27T14:08:44Z | Meraki | acct "
+                      "| issue #1 comment 6444140310 | through 6443814967 "
+                      "| cites [%s](%s%s) in passing |\n"
+                      % (self.CID, self.LOCAL, self.CID))
+        self.assertEqual(r["matched"], ["6444140310"])
+        # both the through-horizon AND the summary link are references
+        self.assertEqual(r["referenced_only_source"], [self.CID, "6443814967"])
+
+    def test_canonical_linked_source_cell_matches(self):
+        # Positive mirror of the fix: the SAME local link in the SOURCE column
+        # of a record table still matches.
+        r = self._run(self.HDR7 +
+                      "| 004-M-01 | 2026-10-27T14:08:44Z | Meraki | acct "
+                      "| [%s](%s%s) | through 6443814967 | verbatim/origin |\n"
+                      % (self.CID, self.LOCAL, self.CID))
+        self.assertEqual(r["matched"], [self.CID])
+
+    def test_kickoff_transport_link_record_matches(self):
+        # rounds/000 receipt-slot shape: 'Transport / source link' column with
+        # link text 'Issue comment <id>' — still a canonical record.
+        hdr = ("| Order | Seat claimed | Transport / source link | `read_up_to` "
+               "| Fidelity | Status |\n| --- | --- | --- | --- | --- | --- |\n")
+        r = self._run(hdr +
+                      "| 1 | Meraki | [Issue comment %s](%s%s) — native session "
+                      "| issue #1 body | verbatim (origin) | RECEIVED |\n"
+                      % (self.CID, self.LOCAL, self.CID))
+        self.assertEqual(r["matched"], [self.CID])
+        self.assertEqual(r["ambiguous_rows"], {})
+
+    def test_p1_parenthetical_carrier_row_is_record(self):
+        # rounds/008/010/011 shape: col0 '008-M-P1 (in 007-M-02)' — headerless
+        # fallback must still see a message record (bare-ID source cell).
+        r = self._run("| 008-M-P1 (in 007-M-02) | Meraki | %s | 16:2x | packet |\n"
+                      % self.CID)
+        self.assertEqual(r["matched"], [self.CID])
+
+
+if __name__ == "__main__":
+    unittest.main()
