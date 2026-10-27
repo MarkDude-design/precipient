@@ -172,3 +172,63 @@ class Dev011Guard(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class RowKindClassification(unittest.TestCase):
+    """Her false-negative fix (6450082179): incidental citation must NOT mask a
+    missing handoff. Three-case fixture on the same valid source ID:
+    (A) only in prose          -> UNINDEXED
+    (B) only incidental table  -> REFERENCED_ONLY (never MATCHED)
+    (C) canonical message row   -> MATCHED
+    Plus: foreign-repo pointers are reference-only, never orphan-labeled."""
+
+    CID = "6443236880"  # her exact fixture ID
+
+    def _run(self, rounds_text):
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            snap = _snapshot(tmp, [(int(self.CID), "2026-10-27T13:35:12Z")])
+            rounds = _rounds_dir(tmp, {"round-x.md": rounds_text})
+            return run_check(snap, rounds, None)
+
+    def test_A_prose_only_is_unindexed(self):
+        r = self._run("Some prose mentions %s in passing, no table.\n" % self.CID)
+        self.assertEqual(r["matched"], [])
+        self.assertEqual(r["referenced_only_source"], [])
+        self.assertEqual(r["unindexed_source"], [self.CID])
+
+    def test_B_incidental_table_citation_is_referenced_only(self):
+        # Her exact fixture: 2-cell row, no message record — must NOT match.
+        r = self._run("| Admin note mentions | %s |\n" % self.CID)
+        self.assertEqual(r["matched"], [])
+        self.assertEqual(r["unindexed_source"], [])
+        self.assertEqual(r["referenced_only_source"], [self.CID])
+
+    def test_C_canonical_message_row_is_matched(self):
+        r = self._run(GOOD_ROW.replace("6448692635", self.CID))
+        self.assertEqual(r["matched"], [self.CID])
+        self.assertEqual(r["referenced_only_source"], [])
+
+    def test_incidental_embedded_cite_is_referenced_only(self):
+        # Real-l ledger shape: ID embedded in a longer prose cell.
+        r = self._run("| 005/005-M-03 | 2026-10-27T15:17:52Z | Meraki | acct | "
+                      "issue #1 through 005-Z-03; bus #3 through %s |\n" % self.CID)
+        self.assertEqual(r["matched"], [])
+        self.assertEqual(r["referenced_only_source"], [self.CID])
+
+    def test_foreign_pointer_not_orphaned(self):
+        # Cross-repo link in a reference row: informational, not an orphan
+        # precipient record claim.
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            snap = _snapshot(tmp, [(6448692635, "2026-10-27T17:22:10Z")])
+            link = ("[6444169721](https://github.com/MarkDude-design/"
+                    "ALLurbaseRnotbelong2us/issues/2#issuecomment-6444169721)")
+            rounds = _rounds_dir(tmp, {"004-x.md":
+                "| 004 | admin note | %s | context |\n" % link})
+            r = run_check(snap, rounds, None)
+            self.assertEqual(r["orphaned_index"], [])
+            self.assertIn("6444169721", r["reference_only_index"])
+            self.assertTrue(any(
+                hint.endswith("ALLurbaseRnotbelong2us")
+                for hint in r["reference_only_index"]["6444169721"]["repos"]))

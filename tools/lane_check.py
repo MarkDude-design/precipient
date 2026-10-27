@@ -100,8 +100,65 @@ def load_snapshot(path: Path):
     return source, malformed
 
 
+LINK_RE = re.compile(r"\[(\d{10,11})\]\((https?://[^\s)]+)\)")
+TIMEISH_RE = re.compile(r"\d{2}:\d{2}|20\d{2}-\d{2}-\d{2}")
+LOCAL_REPO = "MarkDude-design/precipient"
+# Explicit record form used by real message tables when the ID is embedded:
+ISSUE1_COMMENT_RE = re.compile(r"issue #1 comment (\d{10,11})")
+# Message-id label in column 0 of canonical rows (e.g. 004-M-01, 006-M-choice,
+# 010-Z-02): compact token, no spaces.
+MSG_LABEL_RE = re.compile(r"^\S{1,32}$")
+
+
+def classify_row_cells(row: str):
+    """Split a table row into cells; classify every comment ID found.
+
+    Row-kind contract (v0.2 — Meraki's false-negative fix 6450082179):
+    - CANONICAL (a message record; counts toward MATCHED) if the ID is:
+      (i) inside a markdown link cell `[id](…)` pointing at THIS repo
+          (foreign-repo links are reference kind, repo-tagged);
+      (ii) a cell consisting of the bare ID, in a >=3-cell row whose column 0
+          is a compact message-label token (004-M-01 / 006-M-choice shape);
+      (iii) embedded in the explicit record form `issue #1 comment <id>`.
+    - REFERENCE (incidental citation; a source comment cited ONLY this way is
+      reported REFERENCED_ONLY, never MATCHED — the missing-handoff class):
+      any other embedding (horizon pointers like `through <id>`, prose
+      mentions, admin notes, foreign pointers).
+    Failure direction is deliberate: ambiguous rows classify as REFERENCE
+    (over-flag for human review) rather than silently MATCHED.
+    """
+    cells = [c.strip() for c in row.strip().strip("|").split("|")]
+    out = []
+    bare_ok = len(cells) >= 3 and bool(MSG_LABEL_RE.match(cells[0]))
+    for i, cell in enumerate(cells):
+        for m in LINK_RE.finditer(cell):
+            cid, url = m.group(1), m.group(2)
+            m2 = re.search(r"github\.com/([^/\s]+)/([^/\s]+)/", url)
+            repo = "/".join(m2.groups()) if m2 else None
+            # Link to THIS repo's comment permalink = canonical record.
+            # Link to a FOREIGN repo = cross-repo pointer (reference kind,
+            # repo-tagged) — never an orphan-labeled precipient record.
+            if repo is None or repo == LOCAL_REPO:
+                out.append((cid, "canonical", repo))
+            else:
+                out.append((cid, "reference", repo))
+        if LINK_RE.search(cell):
+            continue  # cell already consumed as a link cell
+        for m in ISSUE1_COMMENT_RE.finditer(cell):
+            out.append((m.group(1), "canonical", None))
+        for cid in set(COMMENT_ID_RE.findall(cell)):
+            if ISSUE1_COMMENT_RE.search(cell):
+                continue  # already consumed by the record form
+            if cell == cid and bare_ok:
+                out.append((cid, "canonical", None))
+            else:
+                out.append((cid, "reference", None))
+    return out
+
+
 def parse_rounds_index(rounds_dir: Path):
-    """Parse every rounds/*.md message table; return {comment_id: [provenance]}."""
+    """Parse every rounds/*.md table row; return {comment_id: [provenance]}
+    with v0.2 row-kind classification (canonical vs reference)."""
     index: dict[str, list[dict]] = {}
     files = sorted(p for p in rounds_dir.glob("*.md")) if rounds_dir.is_dir() else []
     if not files:
@@ -112,9 +169,14 @@ def parse_rounds_index(rounds_dir: Path):
             stripped = line.strip()
             if not stripped.startswith("|"):
                 continue
-            for cid in COMMENT_ID_RE.findall(stripped):
+            seen_in_row = set()
+            for cid, kind, repo in classify_row_cells(stripped):
+                if (cid, kind) in seen_in_row:
+                    continue
+                seen_in_row.add((cid, kind))
                 index.setdefault(cid, []).append(
-                    {"file": f.name, "line": lineno, "row": stripped[:160]}
+                    {"file": f.name, "line": lineno, "kind": kind, "repo": repo,
+                     "row": stripped[:160]}
                 )
     return index
 
@@ -194,16 +256,38 @@ def clock_faults(claims_rows, appendix_fires, source):
 def run_check(snapshot: Path, rounds_dir: Path, claims: Path | None):
     source, snap_malformed = load_snapshot(snapshot)
     index = parse_rounds_index(rounds_dir)
-    source_ids, index_ids = set(source), set(index)
+    source_ids = set(source)
+    canonical_ids = {cid for cid, prov in index.items()
+                     if any(p.get("kind") == "canonical" for p in prov)}
+    referenced_ids = set(index) - canonical_ids
     report = {
-        "tool": "lane_check v0 (bus #2 6449523930 §3 smallest first deliverable)",
+        "tool": "lane_check v0.2 (Meraki's false-negative fix 6450082179: "
+                "canonical_message_record vs incidental reference; "
+                "foreign_source_reference bucket)",
         "scope_honesty": "advisory consistency check; authenticates nothing; "
                         "declared claim times are DECLARED_UNVERIFIED (Appendix A)",
         "source_n": len(source_ids),
-        "index_n": len(index_ids),
-        "matched": sorted(source_ids & index_ids),
-        "unindexed_source": sorted(source_ids - index_ids),
-        "orphaned_index": sorted(index_ids - source_ids),
+        "index_n": len(index),
+        "canonical_index_n": len(canonical_ids),
+        # matched ONLY on canonical message records (her case C)
+        "matched": sorted(source_ids & canonical_ids),
+        # source cited ONLY incidentally (her case B) — reported, never matched
+        "referenced_only_source": sorted((source_ids & referenced_ids)
+                                         - canonical_ids),
+        # source in NO table row at all (her case A; prose/bullet events are
+        # outside row scope — documented limitation)
+        "unindexed_source": sorted(source_ids - set(index)),
+        # canonical rows claiming a record the source does not have —
+        # the true missing-record class
+        "orphaned_index": sorted(canonical_ids - source_ids),
+        # ids cited only incidentally and absent from source: foreign pointers,
+        # cross-thread cites — informational, NOT orphan-labeled
+        "reference_only_index": {
+            cid: {"files": sorted({p["file"] for p in index[cid]}),
+                  "repos": sorted({p["repo"] for p in index[cid]
+                                   if p.get("repo")}) or ["(no URL in row)"]}
+            for cid in sorted((referenced_ids - source_ids) - canonical_ids)
+        },
         # Duplicates are FLAGGED FOR REVIEW, not asserted as errors: same-file
         # repeats are normal citation practice (message table + prose cross-ref);
         # true double-claims would be the same ID in two different round tables.
@@ -234,8 +318,17 @@ def human_report(r: dict) -> str:
         f"unindexed_source (in thread, NOT in any ledger): {len(r['unindexed_source'])}",
     ]
     lines += [f"  - {c}" for c in r["unindexed_source"]]
-    lines.append(f"orphaned_index (in ledger, NOT in source): {len(r['orphaned_index'])}")
+    lines.append(f"orphaned_index (CANONICAL rows, NOT in source — missing-record class): "
+                 f"{len(r['orphaned_index'])}")
     lines += [f"  - {c}" for c in r["orphaned_index"]]
+    lines.append(f"referenced_only_source (in thread, ONLY incidental citations — "
+                 f"her case B, never matched): {len(r['referenced_only_source'])}")
+    lines += [f"  - {c}" for c in r["referenced_only_source"]]
+    lines.append(f"reference_only_index (incidental cites, NOT in source — foreign/"
+                 f"cross-thread pointers, informational): {len(r['reference_only_index'])}")
+    for c, d in r["reference_only_index"].items():
+        lines.append(f"  - {c}  rows in: {', '.join(d['files'])}"
+                     f"  repo-hint: {', '.join(d['repos'])}")
     lines.append(f"duplicate_index_ids (flagged for review, not asserted errors): "
                  f"{len(r['duplicate_index_ids'])}")
     for cid, d in r["duplicate_index_ids"].items():
