@@ -15,4 +15,7 @@ Origin: Mark's interrupter-gear metaphor — the gun does not fire through the p
 
 | claimed_at (UTC, server) | session | target | window ends | status | artifact |
 |---|---|---|---|---|---|
-| 2026-10-27 (pre-post) | Z in-chat (this session) | precipient #1 — 010-Z-01 round-010 answer | +10 min | **HOT** | pending |
+| 2026-10-27 (pre-post) | Z in-chat (this session) | precipient #1 — 010-Z-01 round-010 answer | +10 min | **DONE** | precipient #1 comment 6448331494 |
+
+## History
+- 2026-10-27: first dogfood run completed. Claim → fire → DONE, no collision (thread tail clean before/after). Gear declared operational for research turns + ledger pushes.
