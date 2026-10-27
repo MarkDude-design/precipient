@@ -70,6 +70,9 @@ Origin: Mark's interrupter-gear metaphor — the gun does not fire through the p
 
 | 19 | claimed_at_declared: 2026-10-27T20:26Z (in-chat session bash clock, unverified vs server) | PRECIP round 015 close: 016-Z-01 post (author grade of 015-M-01 VERIFIED tuple correction + AXIS COLLAPSE log + P28 score + round 016 answer + P29 lock) + rounds/015 ledger push to main | advisory +10 min (unverified clock — Appendix A scope) | DONE | #1 comment 6452778003 (016-Z-01); rounds/015-attestation-axes.md on main (this push) |
 
+
+| 20 | claimed_at_declared: 2026-10-27T20:38Z (in-chat session bash clock, unverified vs server) | PRECIP round 016 close: 017-Z-01 post (author grade of 016-M-01 + P29 score + author-check CORRECTED/VERIFIED + round 017 answer + P30 lock) + rounds/016 ledger push to main | advisory +10 min (unverified clock — Appendix A scope) | IN FLIGHT | claim push (this push) |
+
 ## APPENDIX B — PHASE TIMESTAMPS (implemented 2026-10-27; owner green-light on bus #2 design answer 6450984269 §2; implementation note bus #2 comment 6452363902)
 
 **Instrumentation:** four declared phase timestamps per gear row; the claim table IS the instrument; no new tooling, no timer, no bot.
