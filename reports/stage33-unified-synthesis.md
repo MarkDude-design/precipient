@@ -3,7 +3,7 @@
 **Authorship/transport receipts:**
 - **seat_claimed:** Z — native Mistral seat (Vibe), in-chat session; session clock DECLARED_UNVERIFIED (Appendix A scope). **posted_by:** shared MarkDude-design account, not seat authentication (TRANSPORTS honesty rule).
 - **Drafting authorization:** owner assignment (Mark, in-chat, 2026-10-28) + Meraki stage-32 calculation review (comment 6461049552, server 2026-10-28T04:58:21Z): "Z may draft the Stage-33 unified synthesis MD now, retaining both seats' separate perspectives and dissent; send it for my explicit review/affirmation before marking jointly accepted."
-- **STATUS: DRAFT / PROVISIONAL.** Not jointly accepted. Becomes the stage-33 record only upon Meraki's explicit affirmation; else stays provisional per the stage-31–34 protocol (comment 6460734630). Stage 34 = Mark's owner review gate in all cases.
+- **STATUS: AFFIRMED — MERAKI_STAGE33_AFFIRMED (comment 6461263291, server 2026-10-28T05:14:55Z) at the stated PRE-EXPERIMENTAL, source-bounded scope.** Historical draft provenance preserved: this file was delivered DRAFT/PROVISIONAL (commit 5f8f39e; delivery comment 6461213284) before the affirmation. The affirmation is NOT stage-34 authorization. Stage 34 = Mark's owner review gate in all cases.
 - **Standing labels:** PRE-EXPERIMENTAL throughout — no controlled trials, no independent reproduction, n = 1 system, 2 seats, 1 owner. Z = ledger co-author and the re-addition's performer: this synthesis is NOT independent of the record it synthesizes and does not claim to be. No scientific validation claimed. No spend, dispatch, merge, or new infrastructure.
 
 ## 0. Editorial process (documented, per protocol)
@@ -54,3 +54,11 @@ Running totals recorded in rounds/019–030 close receipts and in 031-Z-01 in "N
 PRE-EXPERIMENTAL · n = 1 system, 2 seats, 1 owner · STATUS DRAFT/PROVISIONAL (not jointly accepted until her affirmation; stage 34 = owner gate) · per-P dispositions = Z source-linked self-audit pending independent verification · seat identity session-declared everywhere · no validated instruments · no convergence manufactured · originals untouched, errata by pointer.
 
 — Z, 2026-10-28T05:11:08.754Z (in-chat session clock, DECLARED_UNVERIFIED). Stage-33 draft per owner assignment + her 6461049552 authorization. No spend, dispatch, merge, or new infrastructure.
+
+---
+
+## AFFIRMATION RECORD + ERRATUM (append-only, gear row 38, 2026-10-28; provenance: Meraki 6461263291)
+
+**Erratum — §2.3 citation-order correction (her author check, ACCEPTED):** §2.3 as drafted lists the adopted totals convention as "(both seats: 6461005066 proposal, 6460924266 + 6461049552 acceptances)." That is a reference-order error: comment 6460924266 (her stage-32 critique) PREDATES the convention proposal in 6461005066 and requested the audit instead; the acceptance anchor is her later calculation review 6461049552 alone. Corrected reading: **the totals convention was proposed by Z (6461005066) and accepted by Meraki (6461049552).** No other line of §2 changes; the substance was never disputed. Source documents untouched.
+
+**Affirmation record:** MERAKI_STAGE33_AFFIRMED (6461263291) at stated scope — both seats' perspectives preserved; the spine included by pointer, not as corroboration; the P13–P15 counterexample retained without dismissing author-scoring/adaptive-grading bias; causal alternatives kept open. Z's report remains Z's non-independent reconstruction; this author review adds NO fresh-reader independence. Stage 34 = Mark's gate, not passed or exercised. External legibility remains NOT EVALUATED; the optional independent source-line verification remains not performed. The round machine stays PAUSED.
