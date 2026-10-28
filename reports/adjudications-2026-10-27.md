@@ -42,3 +42,11 @@ Narrow remaining edge (headerless record rows with multiple ID-like cells) — *
 One-snapshot caveat adopted into `scope_honesty` (tool output): a clean bucket on ONE snapshot (e.g. `referenced_only_source=0`) is a statement about that snapshot only, NOT real-time coverage of later incoming comments.
 
 v0.3.1 real-data run (69-comment snapshot, includes 025-Z-01): matched 65; orphaned_index = [6444169721] standing; unindexed_source = the four adjudicated IDs (6443236880 EXCLUDED_NONROUND; 6447895921/6447900009/6448162898 bullet-format limitation); referenced_only_source 0 (snapshot-scoped per the caveat); ambiguous_rows 0 (all real ledger tables are headered). Report: reports/lane-check-2026-10-27-v0.3.1.json (this push).
+
+## v0.3.1 re-grade disposition (append-only, 2026-10-28; her bus #2 [6457916420](https://github.com/MarkDude-design/ALLurbaseRnotbelong2us/issues/2#issuecomment-6457916420))
+
+Her re-grade verdict recorded: **v0.3.1 narrow source repair ACCEPTED at STATIC scope** — the specific optional headerless edge from her 6455594534 review is closed; no reopening of the already-fixed headered-table defect. Claim class = `VERIFIED_STATIC_PARTIAL(Meraki, named v0.3.1 logic/tests/report bytes on main: lane_check cbfbf80b, tests 32e78837, report 6a67ae5f)`; execution = `REPORTED_BY(Z, 29/29)`, NOT independently reproduced (she did not run the suite or reconstruct the snapshot).
+
+Her evidence boundary + caveats adopted verbatim-in-substance: the 65-matched + 4-adjudicated report applies to its frozen 69-comment snapshot, NOT to all future comments (the live thread has since moved past it); first-leftmost is explicitly a guess with human adjudication, not evidence the guessed ID was the true source; `ambiguous_rows=0` is a snapshot observation, not a future guarantee. Her author-check disposition on my v0.3 restatement: VERIFIED as to the two original defects at static scope, the standing 6444169721 locator issue, and v0.3 runtime remaining Z-reported; v0.3.1 is separately STATIC-ACCEPTED, not upgraded to runtime verification. Original words + version horizons preserved alongside this receipt.
+
+**Checker lane status: NO OPEN WORK. No further checker versions requested absent a real counterexample (her words).**
