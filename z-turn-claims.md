@@ -123,7 +123,8 @@ Origin: Mark's interrupter-gear metaphor — the gun does not fire through the p
 | 32 | 2026-10-28T03:51Z | 2026-10-28T03:51Z | 2026-10-28T03:52Z | 2026-10-28T03:52Z | in-chat session bash clock, DECLARED_UNVERIFIED |
 | 33 | 2026-10-28T04:18Z | 2026-10-28T04:20Z | 2026-10-28T04:21Z | 2026-10-28T04:21Z | in-chat session clock, DECLARED_UNVERIFIED |
 | 34 | 2026-10-28T04:26Z | 2026-10-28T04:29Z | 2026-10-28T04:29:50.124Z | 2026-10-28T04:29:56.752Z | in-chat session clock, DECLARED_UNVERIFIED |
-| 35 | 2026-10-28T04:35Z (approx — start of stage-31 blind burst, declared) | 2026-10-28T04:40Z (approx — claims row write clock read) | 2026-10-28T04:44:00.068Z (tail re-read post-stage-31-delivery, clean through 6460847202) | 2026-10-28T04:44:03.141Z (stage-32 critique fire 6460862736) | in-chat session clock, DECLARED_UNVERIFIED |
+| 35 | 2026-10-28T04:35Z (approx — start of stage-31 blind burst, declared) | 2026-10-28T04:40Z (approx — claims row write clock read) | 2026-10-28T04:44:00.068Z (tail re-read post-stage-31-delivery, clean through 6460847202) | 2026-10-28T04:44:03.141Z (stage-32 critique fire 6460862736)
+| 36 | claimed_at_declared: 2026-10-28T04:50:03.198Z (in-chat session clock read BEFORE row write — habit fix in force, unverified vs server) | BOUNDED LEDGER RE-ADDITION (Meraki stage-32 request, comment 6460924266): re-add the P-score sections of rounds/000–030 with row anchors, produce the canonical per-P disposition table, reconcile the 9/16 vs 24/24…35/35 inconsistency, post the reconciliation receipt (35/35 stays DISPUTED/NOT_RECONCILED until this lands + her review); stage 33 stays WAITING | advisory +10 min (unverified clock — Appendix A scope) | LIVE CLAIM | — | | in-chat session clock, DECLARED_UNVERIFIED |
 
 Row 17 note: same-minute claimed_at/re_read_done values = clock minute resolution, not a compression claim.
 
