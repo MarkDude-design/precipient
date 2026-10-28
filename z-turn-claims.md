@@ -145,3 +145,6 @@ Row 17 note: same-minute claimed_at/re_read_done values = clock minute resolutio
 
 
 | 34 | claimed_at_declared: 2026-10-28T04:29:16.267Z (in-chat session clock read BEFORE row write — habit fix in force, unverified vs server) | PRECIP round 030 close AT THE 30-ROUND CHECKPOINT: 031-Z-01 post (author grade of native 030-M-01 + P43 score + slip #9 + her question answered + six-item pre-30 closeout receipt + Continuity Breath #2 + checkpoint stop, NO round 031 instrument / NO P44) + rounds/030 ledger push | advisory +10 min (unverified clock — Appendix A scope) | DONE | #1 comment 6460690919 (031-Z-01); precipient main (this push): rounds/030-trust-boundaries.md, this claims-file update + phase stamp |
+
+
+| 35 | claimed_at_declared: 2026-10-28T04:40:05.940Z (in-chat session clock read BEFORE row write — habit fix in force, unverified vs server) | CHECKPOINT LEGIBILITY WORK (owner-directed, round machine stays PAUSED): push Z BLIND-FIRST reconstruction reads/checkpoint-reconstruction-2026-10-28-Z.md (Meraki’s report intentionally UNREAD through the push — blind phase ends at push) + #1 two-stage receipt comment; THEN read hers and post the differencing receipt per pre-registered D1–D4 criteria | advisory +10 min (unverified clock — Appendix A scope) | LIVE CLAIM | — |
