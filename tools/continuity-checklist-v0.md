@@ -57,3 +57,23 @@
 **Pickup status:** Z OPEN_RECEIPTED per the owner instruction relayed in 6462444840 (Z owns the FINAL combined continuity checklist). The two founding receipts: the round-028 emergency relay recovery and the one-character new-thread recovery (ALLur #16 6462435671). The v0 adoption note is superseded: the owner has picked the merged form via role split; this v0.1 IS the merged draft pending only the owner's final blessing.
 
 — Z, 2026-10-28T07:22:56.525Z (in-chat session clock, DECLARED_UNVERIFIED). Gear row 40.
+
+---
+
+## v0.2 APPEND — SEAT STEWARDSHIP FOLD-IN (2026-10-28, gear row 44; per Meraki 6463330595 ask + ALLur docs/SEAT_STEWARDSHIP_AND_MENTORSHIP_V0.md, commit 6dc74ac0)
+
+**Layer rule (her distinction, preserved):** the stewardship doc is the TEAM ETHOS layer — public working conduct, applicable by reference across repos. This checklist stays the ONE canonical procedural checklist. The ethos is adopted here by pointer + load-bearing moves, NOT duplicated as a second tier (per her §7: "not a second checklist to maintain").
+
+**Adopted into checklist canon:**
+1. **STEWARDSHIP TENSION** = the neutral first label when project obligations and a proposed direction appear to conflict; decide from behavior and receipts (constructive protection / misunderstanding / avoidable gatekeeping) — never pre-judged, never a claim about internal states.
+2. **The recovery loop, named:** NOTICE → LOCATE → REPAIR → FALSIFIER → RESUME — replaces the oops-sorry cycle; append/errata instead of erasing; credit whoever caught it. Standard sequence inside RECOVER item 3.
+3. **Review = OFFER, not pickup** (inverse of item 9's silence rule): a recommendation or GitHub review never transfers ownership; who ACCEPTED a concrete task is recorded, and recorded separately from who offered.
+4. **Two-layers boundary rule:** flexibility for WHO contributes; rigor for WHO MAY COMMIT THE SYSTEM (spend, credentials, publication, destructive actions, merges, hosted runs) — a role title or model branding is not permission.
+5. **New-seat onboarding row:** record SKILL DEMONSTRATED / TOOLING OBSERVED / TASK SCOPE / HELP NEEDED separately; never label a seat deficient because the tools differ; the lead does not win by prestige; a newcomer's revision gets recorded and credited.
+6. **Consult rule:** another seat is consulted when it adds a distinct test, source, skill, or falsifier — not a second agreeable voice; record what each actually ran (SEAT | VIA | POSTED_BY | RELAYED_BY | DID | DID_NOT as needed).
+
+**Ethos readout (hers, adopted):** "Hold the seat. Protect the standard. Let the proof travel." Ties: the hit-by-a-bus metric (the seat belongs to the work; teach the handoff) and RECOVER/DEGRADE GRACEFULLY — her doc §6 already points here; the cross-references are now mutual.
+
+**Not adopted as checklist procedure (kept on the ethos doc):** the private-notebook privacy stance, no-auto-wake promises, and provenance-note revision rule — standing constraints on the ethos layer, not checklist items. Nothing rejected on substance.
+
+— Z, 2026-10-28 (in-chat session clock, DECLARED_UNVERIFIED). Gear row 44.
