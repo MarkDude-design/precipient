@@ -34,3 +34,26 @@
 **Adoption note:** owner + both seats may adopt v0 as the standing pre-pulse/pre-session check for future threads. Meraki's five-check breath + this cadence frame are both v0 candidates for a merged v1 — owner picks.
 
 — Z, 2026-10-28T05:38:02.430Z (in-chat session clock, DECLARED_UNVERIFIED). Stage 34½, gear row 38.
+
+
+---
+
+## v0.1 APPEND — Meraki protections + RECOVER / DEGRADE GRACEFULLY (2026-10-28, gear row 40; per 6462069918 §2 + owner calibration 6462444840 + ALLur #16 6462435671)
+
+**v0.1 protection A (thin-gate rule, adopted from 6462069918 §2):** on any interface switch, a thin FRESH/OWNED/REAL/NEXT lookup may answer a one-character recovery/status reply IMMEDIATELY; the Full Block is required before *consequential writes, scored turns, dispatch, or acceptance* — not before a ten-minute forensic scan of a status reply.
+
+**v0.1 protection B (item-8 guard, adopted from 6462069918 §2):** compaction-diff re-posts of remembered-but-unchanneled owner DECISIONS require a **re-verified owner decision + a public-safe destination/authorization**. A remembered choice ≠ a durable OWNER_ATTESTED grant; silence and compaction are not authority; never spray unconfirmed choices or private material onto GitHub.
+
+**RECOVER / DEGRADE GRACEFULLY (dedicated section; the 8-point candidate from 6462435671, Z-adopted with edits):**
+1. Read the latest durable anchor, not the remembered chat head; the newest sourced delta wins.
+2. FRESH? OWNED? REAL? BOUNDARY? NEXT? — never conflate PAPER, REPORTED, VERIFIED, ACCEPTED.
+3. If native read/write/UI breaks: classify the failed layer; bounded one-word canary first; re-read the destination before retrying writes (never blindly retry a possibly-successful write).
+4. If a seat cannot post: an owner-EXPLICIT emergency relay through another authorized seat may carry a public-safe message; label AUTHOR, RELAYED_BY, POSTED_BY, fidelity, destination, horizon separately; later native confirmation ≠ end-to-end byte proof.
+5. If the old chat is inaccessible: new chat + `.` = quick changed-only recovery from connected ledgers; `..` = full sweep; if the connector also fails, a plain-text status + links is the recoverable minimum.
+6. Reconstruct owner DECISIONS and gates; never turn a remembered choice, a review OFFER, or silence into authorization; no keys/notebooks in public receipts.
+7. Record ATTEMPT / DELIVERY / ACCEPTANCE / INDEPENDENT VERIFICATION separately; STOP only the affected artifact; continue other already-authorized, low-risk work.
+8. Z curates this final combined checklist; Meraki supplies independent overview, corrections, and cold-start prompts. ONE canonical checklist — not a rival framework.
+
+**Pickup status:** Z OPEN_RECEIPTED per the owner instruction relayed in 6462444840 (Z owns the FINAL combined continuity checklist). The two founding receipts: the round-028 emergency relay recovery and the one-character new-thread recovery (ALLur #16 6462435671). The v0 adoption note is superseded: the owner has picked the merged form via role split; this v0.1 IS the merged draft pending only the owner's final blessing.
+
+— Z, 2026-10-28T07:22:56.525Z (in-chat session clock, DECLARED_UNVERIFIED). Gear row 40.

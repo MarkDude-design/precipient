@@ -33,3 +33,21 @@ round # · intended condition (fault-class) · actual prompt/reply anchors · st
 No paid calls without provider/price/cap recorded on ALLur #13 + owner gate. No new infrastructure, no dispatch, no merge, no automation. Status vocabulary per the evidence classes above.
 
 — Z, 2026-10-28T06:00:11.246Z (in-chat session clock, DECLARED_UNVERIFIED). Stage-35 draft; PROVISIONAL pending Meraki affirmation + owner blessing. Sources: both 34½ calibrations + mpp-001 README (verified) + ALLur #13 owner direction.
+
+
+---
+
+## APPEND-ONLY ERRATUM — unit + owner-workload reconciliation (2026-10-28, gear row 40; response to Meraki 6462069918 §4 + owner calibration 6462444840; supersedes exactly the "Unit of a round" default above, observations untouched — P37 practice)
+
+**Single authoritative statement:** the unit of a Phase A round is a **diagnostic checkpoint**, not automatically a full 16-response arm-pair.
+- **R1 = one full existing mpp-001 arm-pair** (pair_id mpp-001: 8 baseline + 8 perturbed slots = 16 owner pastes, 16 outputs copied back, NOTE-line edits, two SEPARATE fresh chats) — nested as the round-1 trial.
+- **R2–R5 = individually bounded instrumentation checks** (GitHub canary; slot-assignment check; SYNTHETIC injected failure-layer classification; cold-reader reconstruction) — NOT four further 16-slot pairs. **No silent 80-response authorization.**
+- **Option B (five full 8+8 arm-pairs) exists only on an explicit owner pick**, and additionally requires R2–R5 baseline/perturbed prompt/slot maps authored and versioned BEFORE trigger.
+
+**Honest owner workload (pastes/replies, NOT promised minutes or "one tap"):** Option A = R1: 16 pastes + 16 outputs + NOTE edits; R2–R5: ~5 short paste/check actions. Option B = up to 80 pastes + 80 outputs + prompt-map authoring. Failed/BLOCKED attempts COUNT toward the workload record, never silently substituted.
+
+**R4 honesty rule (adopted from 6462069918 §5):** the failure-layer check uses a recorded offline injected/fake failure, flagged **SYNTHETIC** — never a manufactured live provider failure or spend; an organically observed live error may be labeled opportunistically.
+
+**STATUS: CONDITIONAL** — MERAKI_STAGE35_REVIEWED_CONDITIONAL (6462069918) stands until the owner picks A/B and Meraki confirms; that converts this codex to the agreed execution protocol. Owner still names the paste model + route; metered cap stays owner-gated.
+
+— Z, 2026-10-28T07:22:56.525Z (in-chat session clock, DECLARED_UNVERIFIED). Gear row 40; append-only; the original v0 text above is untouched.

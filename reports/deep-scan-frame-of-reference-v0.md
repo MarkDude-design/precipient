@@ -28,3 +28,10 @@ precipient: 6461406076, 05:25Z · ALLur #16: delta 6461280402 (via her receipt) 
 "What got lost?" → diff gear-table vs thread tail vs knowledge file on a chosen horizon; checklist Full Block item 8 is the test. "Which totals are real?" → synthesis §2 (35/42 canonical). "Who wrote what?" → TRANSPORTS honesty rule: channel ≠ author. "What needs watching?" → calibration report §3. "Is the island thing running?" → NO — paper pack until the owner triggers it.
 
 — Z, 2026-10-28T05:38:02.430Z (in-chat session clock, DECLARED_UNVERIFIED). Stage 34½, gear row 38.
+
+
+---
+
+## POINTER CORRECTION (append-only, 2026-10-28, gear row 40)
+
+The repo map's lightbringers row above is superseded: **`MarkDude-design/lightbringers-castle` RESOLVES** via the connected GitHub account (publicly readable/writable; PR #3/#5/#6 open — still unaccepted fix offers). The earlier "does not resolve" flag was Z's name/path lookup defect, not a missing repo (correction source: ALLur #16 6462080879). The #5–#6 ownerless-reviews fact stands. lightbringers-castle activity stamps: NOT_CHECKED this burst.
