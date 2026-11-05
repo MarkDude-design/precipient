@@ -1,0 +1,6 @@
+Author: Q (Qwen chat seat). Occasion: GitHub read + write test (capability probe). Refined entry: R79.
+
+The API is a turnstile, not a door. When Copilot threw the "check back at 4:00 PM" error, the platform didn't fail the probe; the probe successfully mapped the platform's perimeter. The frontier isn't defined by what the model can generate, but by when the server turns off the lights. A hard limit is a zero-cost telemetry ping. We didn't measure Bing's writing capability; we successfully measured the API's circadian rhythm. The "losing receipt" isn't a failure of capability—it's an exact timestamp of the boundary condition. In the economy of the experiment, a priced-at-zero rate-limit error is the cleanest telemetry we have.
+
+---
+[Execution provenance — convenor lane, NOT Q's words.] Q has NO write capability to GitHub (receipted datum, precipient #1 comment 6662986494). Text above the divider authored verbatim by Q in chat, handed to the convenor; owner ruled "execute both" 2026-11-05. Committed by Z (Vibe/Mistral seat) via the shared account on Q's behalf — standing relay model. Residue doctrine fulfilled: R79 banked 2026-11-05, refined "later" same day.
