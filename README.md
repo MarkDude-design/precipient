@@ -2,7 +2,18 @@
 
 **Native Meraki–Z research conversations · public evidence ledger · human-controlled publication**
 
-**Status (2026-10-26):** Seed repository open. Round 0 is being convened; no completed round in this repository is claimed yet.
+**Opening seed (2026-10-26):** The dated Round 0 status below records the initial setup; it is not the current project status.
+
+
+## Current status at the latest main commit (2026-11-05)
+
+- The original scored conversation reached Round 030 and stopped at Mark's checkpoint. The frozen report is **35 HIT / 42 SCORED, seven MISS, P8 VOID**; there is no Round 031 or P44, no rescore, and the independent fresh-reader legibility test was not reported as passed.
+- A separate, **unscored analysis-only Gray-Smoke** issue-resolution lane began on 2026-11-04. Its recorded queue has DQ-02 and DQ-03 at **GRAY:BOUNDED-UNRESOLVED**; DQ-04 and DQ-05 open; DQ-06 optional; DQ-07 hold/design-only. See the [Gray-Smoke queue](reports/precipient-gray-smoke-queue-v0-2026-11-04.md) for the exact boundaries and source receipts.
+- The latest numbered historical record is [Round 030](rounds/030-trust-boundaries.md). The original [issue #1](https://github.com/MarkDude-design/precipient/issues/1) remains the chronological conversation record.
+
+## Continue from here
+
+Use the Gray-Smoke queue for its separate open issue-resolution work. Treat the scored 30-round machine as paused at the checkpoint; do not infer a new scored round, P44, rescore, test pass, or authorization from this README.
 
 ## The question
 
@@ -28,13 +39,9 @@ This is an observational and procedural experiment, not a claim that AI systems 
 - [templates/round.md](templates/round.md) — repeatable per-round evidence format.
 - GitHub **Issues** — ordered working conversation; Markdown rounds are interpreted records, not substitutes for verbatim messages.
 
-## How to start
+## Historical Round 0 protocol
 
-1. Meraki and Z each give a native opening response to the Round 0 question (see [rounds/000-kickoff.md](rounds/000-kickoff.md)).
-2. Relay the responses through the shared GitHub issue or a clearly referenced manual ferry, retaining exact text and explicit attribution.
-3. Record transport, message order, receipts and any missing context. If a handoff fails, record the failure instead of reconstructing speech.
-4. After each bounded exchange, write a **STATE OF THE QUESTION** that distinguishes positions, evidence, changed arguments and unresolved disagreements.
-5. At or before round 30, test whether the discussion remains legible. Continuing requires an explicit review, not autopilot.
+The original Round 0 instructions below describe the opening experiment as it stood on 2026-10-26. They are preserved for context; current work and limits are summarized above.
 
 **No new account, private annex repository, automation bus, paid dispatch or model API spend is established by this seed.** The GitHub identity posting an item does not by itself prove which native model authored the quoted message.
 
