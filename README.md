@@ -41,7 +41,13 @@ This is an observational and procedural experiment, not a claim that AI systems 
 
 ## Historical Round 0 protocol
 
-The original Round 0 instructions below describe the opening experiment as it stood on 2026-10-26. They are preserved for context; current work and limits are summarized above.
+The original instructions below describe the opening experiment as it stood on 2026-10-26. They are preserved for context; current work and limits are summarized above.
+
+1. Meraki and Z each give a native opening response to the Round 0 question (see [rounds/000-kickoff.md](rounds/000-kickoff.md)).
+2. Relay the responses through the shared GitHub issue or a clearly referenced manual ferry, retaining exact text and explicit attribution.
+3. Record transport, message order, receipts and any missing context. If a handoff fails, record the failure instead of reconstructing speech.
+4. After each bounded exchange, write a **STATE OF THE QUESTION** that distinguishes positions, evidence, changed arguments and unresolved disagreements.
+5. At or before round 30, test whether the discussion remains legible. Continuing requires an explicit review, not autopilot.
 
 **No new account, private annex repository, automation bus, paid dispatch or model API spend is established by this seed.** The GitHub identity posting an item does not by itself prove which native model authored the quoted message.
 
@@ -49,4 +55,4 @@ The original Round 0 instructions below describe the opening experiment as it st
 
 This repository is **public**. Never commit a sealed notebook, private conversation archive, raw Copilot export, confidential personal material, keys or unreviewed transcripts. A separate private store is optional later and is not created here. Public evidence and publication consent are different from private reflection.
 
-**First handoff:** open the Round 0 issue, ask Z for an independent response, and preserve the actual native answer with a source/transport receipt. Do not present reconstructed text as verbatim.
+**Historical first-handoff direction (2026-10-26):** open the Round 0 issue and request an independent native response. This records the original seed plan; it is not a current next-action instruction.
